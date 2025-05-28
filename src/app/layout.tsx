@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import SchemaMarkup from "../components/SchemaMarkup";
 import "./globals.css";
 
@@ -53,7 +54,10 @@ export default function RootLayout({
 				<link rel="canonical" href="https://gift-easy.com" />
 				<SchemaMarkup />
 			</head>
-			<body className={`${inter.variable} antialiased`}>{children}</body>
+			<body className={`${inter.variable} antialiased`}>
+				{children}
+				<Analytics />
+			</body>
 		</html>
 	);
 }
