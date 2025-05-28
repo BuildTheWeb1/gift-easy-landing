@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://gift-easy.com
+
+# Sitemaps
+Sitemap: https://gift-easy.com/sitemap.xml
