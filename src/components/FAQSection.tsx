@@ -15,7 +15,7 @@ const faqs = [
 		id: "faq-occasions",
 		question: "What types of occasions does Gift Easy support?",
 		answer:
-			"Gift Easy supports a wide range of occasions across three main categories: 1) Personal Achievements & Milestones (birthdays, graduations, new jobs, retirement, first day of school/college, exams, fitness achievements, new homes, and business ventures), 2) Cultural & Religious Events (Christmas, Hanukkah, Diwali, Eid, Chinese New Year, Valentine's Day, Mother's Day, Father's Day, and Thanksgiving), and 3) Relationship Milestones (engagements, weddings, housewarmings, baby showers, bridal showers, and pet adoptions).",
+			"Gift Easy supports a wide range of occasions across three main categories: \n\n1) Personal Achievements & Milestones (birthdays, graduations, new jobs, retirement, first day of school/college, exams, fitness achievements, new homes, and business ventures), \n\n2) Cultural & Religious Events (Christmas, Hanukkah, Diwali, Eid, Chinese New Year, Valentine's Day, Mother's Day, Father's Day, and Thanksgiving), \n\n3) Relationship Milestones (engagements, weddings, housewarmings, baby showers, bridal showers, and pet adoptions).",
 	},
 	{
 		id: "faq-budget",
@@ -39,7 +39,7 @@ const FAQSection = () => {
 		>
 			<h2
 				id="faq-heading"
-				className="text-3xl font-bold text-center mb-12 text-white"
+				className="text-3xl font-bold text-center mb-12 text-black"
 			>
 				Frequently Asked Questions
 			</h2>
@@ -48,12 +48,12 @@ const FAQSection = () => {
 				{faqs.map((faq) => (
 					<div
 						key={faq.id}
-						className="bg-white/5 p-6 rounded-xl backdrop-blur-sm"
+						className="bg-white/70 p-6 rounded-xl backdrop-blur-sm shadow-xl"
 					>
-						<h3 className="text-xl font-semibold text-indigo-300 mb-3">
+						<h3 className="text-xl font-bold text-black mb-3">
 							{faq.question}
 						</h3>
-						<p className="text-white/90">{faq.answer}</p>
+						<p className="text-black font-medium whitespace-pre-line">{faq.answer}</p>
 					</div>
 				))}
 			</div>

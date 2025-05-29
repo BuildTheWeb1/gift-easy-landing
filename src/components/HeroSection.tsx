@@ -4,29 +4,26 @@ import Link from "next/link";
 const HeroSection = () => {
 	return (
 		<div className="max-w-3xl mx-auto text-center mb-16">
-			<div className="flex justify-center mb-6">
-				<div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm">
-					<Image
-						src="/gift-box.svg"
-						alt="Gift Easy logo"
-						width={64}
-						height={64}
-						className="text-white"
-						priority
-					/>
-				</div>
+			<div className="flex justify-center mb-2">
+				<Image
+					src="/GiftEasy-logo.svg"
+					alt="Gift Easy logo"
+					width={300}
+					height={300}
+					className="text-white"
+					priority
+				/>
 			</div>
 
-			<h1 className="text-5xl md:text-6xl font-bold mb-6">Gift Easy</h1>
-
-			<p className="text-xl md:text-2xl mb-10 text-indigo-100">
-				Find the perfect gift for any occasion with AI personalized
-				recommendations
-			</p>
+			<h1 className="text-xl md:text-2xl mb-10 text-black">
+				Find the perfect gift for any occasion with{" "}
+				<span className="font-extrabold text-2xl md:text-3xl">AI</span>{" "}
+				personalized recommendations
+			</h1>
 
 			<Link
 				href="https://app.gift-easy.com/"
-				className="px-8 py-4 bg-indigo-500 text-white font-medium rounded-xl hover:bg-indigo-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-2"
+				className="px-12 py-6 bg-white/70 text-black font-bold rounded-xl hover:bg-gift-blue-light hover:text-black transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-2"
 			>
 				Get Started
 				<svg

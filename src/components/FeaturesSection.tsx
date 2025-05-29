@@ -1,30 +1,26 @@
 const FeaturesSection = () => {
 	return (
 		<div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-			<div className="bg-white/5 p-6 rounded-xl backdrop-blur-sm">
-				<div className="text-indigo-300 mb-4 text-xl font-semibold">
-					Personalized
-				</div>
-				<p>
+			<div className="bg-white/70 p-6 rounded-xl backdrop-blur-sm shadow-xl">
+				<h3 className="text-black mb-4 text-xl font-bold">Personalized</h3>
+				<p className="text-black font-medium">
 					Tailored gift recommendations based on occasion, budget and recipient
 					preferences
 				</p>
 			</div>
 
-			<div className="bg-white/5 p-6 rounded-xl backdrop-blur-sm">
-				<div className="text-indigo-300 mb-4 text-xl font-semibold">Simple</div>
-				<p>
+			<div className="bg-white/70 p-6 rounded-xl backdrop-blur-sm shadow-xl">
+				<h3 className="text-black mb-4 text-xl font-bold">Simple</h3>
+				<p className="text-black font-medium">
 					Easy-to-use interface that makes finding the perfect gift effortless
 				</p>
 			</div>
 
-			<div className="bg-white/5 p-6 rounded-xl backdrop-blur-sm">
-				<div className="text-indigo-300 mb-4 text-xl font-semibold">
-					Thoughtful
-				</div>
-				<p>
+			<div className="bg-white/70 p-6 rounded-xl backdrop-blur-sm shadow-xl">
+				<h3 className="text-black mb-4 text-xl font-bold">Thoughtful</h3>
+				<p className="text-black font-medium">
 					Curated selection of meaningful gifts for every relationship and
-					milestone for only $0.99
+					milestone for only <span className="font-extrabold">$0.99</span>
 				</p>
 			</div>
 		</div>
