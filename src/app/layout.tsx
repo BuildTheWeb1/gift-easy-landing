@@ -16,6 +16,11 @@ export const metadata: Metadata = {
 		"Find the perfect gift for any occasion with personalized AI recommendations from Gift Easy.",
 	keywords:
 		"gift recommendations, AI gift finder, personalized gifts, gift ideas, occasion gifts, budget gifts",
+	icons: {
+		icon: "/GiftEasy-logo.svg",
+		apple: "/GiftEasy-logo.svg",
+		shortcut: "/GiftEasy-logo.svg",
+	},
 	openGraph: {
 		title: "Gift Easy | AI-Powered Gift Recommendations",
 		description:
