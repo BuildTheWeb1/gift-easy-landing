@@ -38,6 +38,12 @@ body {
   background: linear-gradient(135deg, var(--gift-blue-light), var(--gift-blue), var(--gift-blue-light));
 }
 
+/* Animation utilities */
+.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
 .text-gift-purple {
   color: var(--gift-purple);
 }
