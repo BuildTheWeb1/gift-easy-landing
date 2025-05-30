@@ -39,7 +39,7 @@ const FAQSection = () => {
 		>
 			<h2
 				id="faq-heading"
-				className="text-3xl font-bold text-center mb-12 text-black"
+				className="text-2xl font-medium text-center mb-12 text-black"
 			>
 				Frequently Asked Questions
 			</h2>
@@ -48,12 +48,14 @@ const FAQSection = () => {
 				{faqs.map((faq) => (
 					<div
 						key={faq.id}
-						className="bg-white/70 p-6 rounded-xl backdrop-blur-sm shadow-xl"
+						className="bg-white/70 p-6 rounded-xl backdrop-blur-sm shadow-xl transition-transform duration-300 hover:scale-105"
 					>
 						<h3 className="text-xl font-bold text-black mb-3">
 							{faq.question}
 						</h3>
-						<p className="text-black font-medium whitespace-pre-line">{faq.answer}</p>
+						<p className="text-black font-medium whitespace-pre-line">
+							{faq.answer}
+						</p>
 					</div>
 				))}
 			</div>

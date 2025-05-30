@@ -1,69 +1,78 @@
 @import "tailwindcss";
 
 :root {
-  /* New Gift Easy color palette */
-  --gift-purple: #CDB4DB;
-  --gift-pink-light: #FFC8DD;
-  --gift-pink: #FFAFCC;
-  --gift-blue-light: #BDE0FE;
-  --gift-blue: #A2D2FF;
-  
-  --background: #ffffff;
-  --foreground: #171717;
+	/* New Gift Easy color palette */
+	--gift-purple: #cdb4db;
+	--gift-pink-light: #ffc8dd;
+	--gift-pink: #ffafcc;
+	--gift-blue-light: #bde0fe;
+	--gift-blue: #a2d2ff;
+
+	--background: #ffffff;
+	--foreground: #171717;
 }
 
 /* Theme colors */
 :root {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Custom utility classes for the new color palette */
 .bg-gift-gradient {
-  background: linear-gradient(135deg, var(--gift-blue-light), var(--gift-blue), var(--gift-blue-light));
+	background: linear-gradient(
+		135deg,
+		var(--gift-blue-light),
+		var(--gift-blue),
+		var(--gift-blue-light)
+	);
+}
+
+.bg-gift-pink-gradient {
+	background: linear-gradient(155deg, var(--gift-pink-light), var(--gift-pink));
 }
 
 /* Animation utilities */
 .animate-in {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+	opacity: 1 !important;
+	transform: translateY(0) !important;
 }
 
 .text-gift-purple {
-  color: var(--gift-purple);
+	color: var(--gift-purple);
 }
 
 .text-gift-pink {
-  color: var(--gift-pink);
+	color: var(--gift-pink);
 }
 
 .text-gift-blue {
-  color: var(--gift-blue);
+	color: var(--gift-blue);
 }
 
 .border-gift-purple {
-  border-color: var(--gift-purple);
+	border-color: var(--gift-purple);
 }
 
 .border-gift-pink {
-  border-color: var(--gift-pink);
+	border-color: var(--gift-pink);
 }
 
 .border-gift-blue {
-  border-color: var(--gift-blue);
+	border-color: var(--gift-blue);
 }

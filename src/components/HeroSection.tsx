@@ -23,12 +23,12 @@ const HeroSection = () => {
 
 			<Link
 				href="https://app.gift-easy.com/"
-				className="px-12 py-6 bg-white/70 text-black font-bold rounded-xl hover:bg-gift-blue-light hover:text-black transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-2"
+				className="group px-12 py-6 bg-gift-pink-gradient text-[#171717] text-xl font-bold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-2"
 			>
 				Get Started
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					className="h-5 w-5"
+					className="h-6 w-6 transition-all duration-300 transform group-hover:translate-x-1"
 					viewBox="0 0 20 20"
 					fill="currentColor"
 					aria-hidden="true"
