@@ -34,12 +34,12 @@ const faqs = [
 const FAQSection = () => {
 	return (
 		<section
-			className="w-full max-w-5xl mx-auto mt-24"
+			className="w-full max-w-5xl mx-auto mt-12 md:mt-24"
 			aria-labelledby="faq-heading"
 		>
 			<h2
 				id="faq-heading"
-				className="text-2xl font-medium text-center mb-12 text-black"
+				className="text-lg md:text-2xl font-medium text-center mb-12 text-black"
 			>
 				Frequently Asked Questions
 			</h2>
@@ -50,10 +50,10 @@ const FAQSection = () => {
 						key={faq.id}
 						className="bg-white/70 p-6 rounded-xl backdrop-blur-sm shadow-xl transition-transform duration-300 hover:scale-105"
 					>
-						<h3 className="text-xl font-bold text-black mb-3">
+						<h3 className="text-lg md:text-xl font-bold text-black mb-3">
 							{faq.question}
 						</h3>
-						<p className="text-black font-medium whitespace-pre-line">
+						<p className="text-black text-sm md:text-base font-medium whitespace-pre-line">
 							{faq.answer}
 						</p>
 					</div>

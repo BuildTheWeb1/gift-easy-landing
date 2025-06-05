@@ -1,6 +1,6 @@
 const Footer = () => {
 	return (
-		<footer className="mt-24 text-center text-black text-sm">
+		<footer className="mt-12 md:mt-24 text-center text-black text-sm">
 			<p className="mb-2 justify-center flex">
 				follow on{" "}
 				<a
