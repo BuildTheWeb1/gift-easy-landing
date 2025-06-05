@@ -7,13 +7,10 @@ import ScrollAnimation from "../components/ScrollAnimation";
 export default function Home() {
 	return (
 		<div className="min-h-screen bg-gift-gradient text-white">
-			<div className="container mx-auto px-4 py-16 flex flex-col items-center justify-center min-h-screen">
+			<div className="container mx-auto px-4 pt-0 pb-10 md:py-16 flex flex-col items-center justify-center min-h-screen">
 				<main>
 					{/* Hero Section */}
-					<section
-						aria-labelledby="hero-heading"
-						className="mb-20"
-					>
+					<section aria-labelledby="hero-heading" className="mb-20">
 						<ScrollAnimation>
 							<HeroSection />
 						</ScrollAnimation>
@@ -34,11 +31,7 @@ export default function Home() {
 					</section>
 
 					{/* FAQ Section */}
-					<section
-						id="faq"
-						aria-labelledby="faq-heading"
-						className="mb-20"
-					>
+					<section id="faq" aria-labelledby="faq-heading" className="mb-20">
 						<ScrollAnimation>
 							<FAQSection />
 						</ScrollAnimation>
