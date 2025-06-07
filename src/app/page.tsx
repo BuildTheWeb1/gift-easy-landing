@@ -3,6 +3,7 @@ import FeaturesSection from "../components/FeaturesSection";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import ScrollAnimation from "../components/ScrollAnimation";
+import SocialProofSection from "../components/SocialProofSection";
 
 export default function Home() {
 	return (
@@ -27,6 +28,16 @@ export default function Home() {
 						</h2>
 						<ScrollAnimation>
 							<FeaturesSection />
+						</ScrollAnimation>
+					</section>
+
+					{/* Social Proof Section */}
+					<section id="social-proof" aria-labelledby="social-proof-heading" className="mb-20">
+						<h2 id="social-proof-heading" className="sr-only">
+							Social Proof
+						</h2>
+						<ScrollAnimation>
+							<SocialProofSection />
 						</ScrollAnimation>
 					</section>
 
