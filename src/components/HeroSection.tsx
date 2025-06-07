@@ -17,15 +17,17 @@ const HeroSection = () => {
 
 			<h1 className="text-lg md:text-2xl mb-10 text-black">
 				Find the perfect gift for any occasion with{" "}
-				<span className="font-extrabold text-xl md:text-3xl">AI</span>{" "}
+				<span className="font-extrabold text-xl text-[#6a004d] md:text-3xl">
+					AI
+				</span>{" "}
 				personalized recommendations
 			</h1>
 
 			<Link
 				href="https://app.gift-easy.com/"
-				className="group px-12 py-6 bg-gift-pink-gradient text-[#171717] text-lg md:text-xl font-bold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-2"
+				className="group px-4 md:px-12 py-6 bg-gift-pink-gradient text-[#6a004d] text-lg md:text-xl font-bold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-2"
 			>
-				Get Started
+				Find the Perfect Gift Now
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					className="h-6 w-6 transition-all duration-300 transform group-hover:translate-x-1"

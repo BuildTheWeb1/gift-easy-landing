@@ -2,13 +2,13 @@ const Footer = () => {
 	return (
 		<footer className="mt-12 md:mt-24 text-center text-black text-sm">
 			<p className="mb-2 justify-center flex">
-				follow on{" "}
 				<a
 					href="https://x.com/buildtheweb1"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="inline-flex items-center hover:underline"
 				>
+					follow on{" "}
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="16"

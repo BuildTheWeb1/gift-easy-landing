@@ -48,7 +48,7 @@ const FAQSection = () => {
 				{faqs.map((faq) => (
 					<div
 						key={faq.id}
-						className="bg-white/70 p-6 rounded-xl backdrop-blur-sm shadow-xl transition-transform duration-300 hover:scale-105"
+						className="bg-white/90 p-6 rounded-xl backdrop-blur-sm shadow-xl transition-transform duration-300 hover:scale-102"
 					>
 						<h3 className="text-lg md:text-xl font-bold text-black mb-3">
 							{faq.question}
