@@ -39,12 +39,12 @@ const FAQSection = () => {
 		>
 			<h2
 				id="faq-heading"
-				className="text-lg md:text-2xl font-medium text-center mb-12 text-black"
+				className="text-lg md:text-2xl font-medium text-center mb-6 md:mb-12 text-black"
 			>
 				Frequently Asked Questions
 			</h2>
 
-			<div className="space-y-6">
+			<div className="space-y-4 md:space-y-6">
 				{faqs.map((faq) => (
 					<div
 						key={faq.id}
@@ -53,7 +53,7 @@ const FAQSection = () => {
 						<h3 className="text-lg md:text-xl font-bold text-black mb-3">
 							{faq.question}
 						</h3>
-						<p className="text-black text-sm md:text-base font-medium whitespace-pre-line">
+						<p className="text-black text-base font-medium whitespace-pre-line">
 							{faq.answer}
 						</p>
 					</div>

@@ -23,25 +23,27 @@ const HeroSection = () => {
 				personalized recommendations
 			</h1>
 
-			<Link
-				href="https://app.gift-easy.com/"
-				className="group px-4 md:px-12 py-6 bg-gift-pink-gradient text-[#6a004d] text-lg md:text-xl font-bold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-2"
-			>
-				Find the Perfect Gift Now
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					className="h-6 w-6 transition-all duration-300 transform group-hover:translate-x-1"
-					viewBox="0 0 20 20"
-					fill="currentColor"
-					aria-hidden="true"
+			<div className="flex justify-center w-full">
+				<Link
+					href="https://app.gift-easy.com/"
+					className="group px-8 md:px-12 w-full sm:w-auto py-6 bg-gift-pink-gradient text-[#6a004d] text-lg md:text-xl font-bold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2"
 				>
-					<path
-						fillRule="evenodd"
-						d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-						clipRule="evenodd"
-					/>
-				</svg>
-			</Link>
+					Find the Perfect Gift Now
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						className="h-6 w-6 transition-all duration-300 transform group-hover:translate-x-1"
+						viewBox="0 0 20 20"
+						fill="currentColor"
+						aria-hidden="true"
+					>
+						<path
+							fillRule="evenodd"
+							d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+							clipRule="evenodd"
+						/>
+					</svg>
+				</Link>
+			</div>
 		</div>
 	);
 };

@@ -4,7 +4,7 @@ const SocialProofSection = () => {
 			<h3 className="text-lg md:text-2xl font-bold mb-3 text-[#6a004d]">
 				🎉 We're Live on Product Hunt
 			</h3>
-			<p className="mb-6 text-sm md:text-base text-black">
+			<p className="mb-6 text-base text-black">
 				Check us out and support our AI-powered gift recommendation platform!
 			</p>
 			<div className="flex justify-center">

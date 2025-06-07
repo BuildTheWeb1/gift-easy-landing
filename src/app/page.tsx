@@ -11,7 +11,7 @@ export default function Home() {
 			<div className="container mx-auto px-4 pt-0 pb-10 md:py-16 flex flex-col items-center justify-center min-h-screen">
 				<main>
 					{/* Hero Section */}
-					<section aria-labelledby="hero-heading" className="mb-20">
+					<section aria-labelledby="hero-heading" className="mb-12 md:mb-20">
 						<ScrollAnimation>
 							<HeroSection />
 						</ScrollAnimation>
@@ -21,7 +21,7 @@ export default function Home() {
 					<section
 						id="features"
 						aria-labelledby="features-heading"
-						className="mb-20"
+						className="mb-12 md:mb-20"
 					>
 						<h2 id="features-heading" className="sr-only">
 							Our Features
@@ -32,7 +32,11 @@ export default function Home() {
 					</section>
 
 					{/* Social Proof Section */}
-					<section id="social-proof" aria-labelledby="social-proof-heading" className="mb-20">
+					<section
+						id="social-proof"
+						aria-labelledby="social-proof-heading"
+						className="mb-12 md:mb-20"
+					>
 						<h2 id="social-proof-heading" className="sr-only">
 							Social Proof
 						</h2>
@@ -42,7 +46,11 @@ export default function Home() {
 					</section>
 
 					{/* FAQ Section */}
-					<section id="faq" aria-labelledby="faq-heading" className="mb-20">
+					<section
+						id="faq"
+						aria-labelledby="faq-heading"
+						className="mb-12 md:mb-20"
+					>
 						<ScrollAnimation>
 							<FAQSection />
 						</ScrollAnimation>
