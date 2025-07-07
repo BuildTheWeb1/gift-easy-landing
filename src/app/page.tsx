@@ -1,64 +1,106 @@
+import EnhancedScrollAnimation from "@/components/EnhancedScrollAnimation";
+import HeroSection from "@/components/Hero/HeroSection";
+import SocialProofSection from "@/components/SocialProofSection";
 import FAQSection from "../components/FAQSection";
-import FeaturesSection from "../components/FeaturesSection";
 import Footer from "../components/Footer";
-import HeroSection from "../components/HeroSection";
-import ScrollAnimation from "../components/ScrollAnimation";
-import SocialProofSection from "../components/SocialProofSection";
+import HowItWorks from "../components/HowItWorks";
+import WhyChoose from "../components/WhyChoose";
 
 export default function Home() {
 	return (
-		<div className="min-h-screen bg-gift-gradient text-white">
-			<div className="container mx-auto px-4 pt-0 pb-10 md:py-16 flex flex-col items-center justify-center min-h-screen">
+		<div className="bg-teal-gradient text-white">
+			<div className="container mx-auto px-4">
 				<main>
 					{/* Hero Section */}
-					<section aria-labelledby="hero-heading" className="mb-12 md:mb-20">
-						<ScrollAnimation>
+					<section
+						aria-labelledby="hero-heading"
+						className="md:h-screen flex items-center justify-center"
+					>
+						<EnhancedScrollAnimation
+							animation="fade-up"
+							duration={800}
+							once={false}
+						>
 							<HeroSection />
-						</ScrollAnimation>
+						</EnhancedScrollAnimation>
 					</section>
 
-					{/* Features Section */}
+					{/* How It Works Section */}
 					<section
-						id="features"
-						aria-labelledby="features-heading"
-						className="mb-12 md:mb-20"
+						id="how-it-works"
+						aria-labelledby="how-it-works-heading"
+						className="md:h-screen flex items-center justify-center"
 					>
-						<h2 id="features-heading" className="sr-only">
-							Our Features
+						<h2 id="how-it-works-heading" className="sr-only">
+							How It Works
 						</h2>
-						<ScrollAnimation>
-							<FeaturesSection />
-						</ScrollAnimation>
+						<EnhancedScrollAnimation
+							animation="fade-left"
+							duration={800}
+							threshold={0.2}
+							once={false}
+						>
+							<HowItWorks />
+						</EnhancedScrollAnimation>
 					</section>
 
-					{/* Social Proof Section */}
+					{/* Why Choose Section */}
 					<section
-						id="social-proof"
-						aria-labelledby="social-proof-heading"
-						className="mb-12 md:mb-20"
+						id="why-choose"
+						aria-labelledby="why-choose-heading"
+						className="md:h-screen flex items-center justify-center"
 					>
-						<h2 id="social-proof-heading" className="sr-only">
-							Social Proof
+						<h2 id="why-choose-heading" className="sr-only">
+							Why Choose GiftEasy
 						</h2>
-						<ScrollAnimation>
-							<SocialProofSection />
-						</ScrollAnimation>
+						<EnhancedScrollAnimation
+							animation="fade-right"
+							duration={800}
+							threshold={0.2}
+							once={false}
+						>
+							<WhyChoose />
+						</EnhancedScrollAnimation>
 					</section>
 
 					{/* FAQ Section */}
 					<section
 						id="faq"
 						aria-labelledby="faq-heading"
-						className="mb-12 md:mb-20"
+						className="md:h-screen flex items-center justify-center"
 					>
-						<ScrollAnimation>
+						<EnhancedScrollAnimation
+							animation="zoom-in"
+							duration={800}
+							threshold={0.2}
+							once={false}
+						>
 							<FAQSection />
-						</ScrollAnimation>
+						</EnhancedScrollAnimation>
 					</section>
+
+					{/* Social Proof Section */}
 				</main>
 
 				{/* Footer */}
-				<div className="transition-all duration-700 ease-in-out transform translate-y-0">
+				<div className="py-8 transition-all duration-700 ease-in-out transform translate-y-0">
+					<section
+						id="social-proof"
+						aria-labelledby="social-proof-heading"
+						className="flex items-center justify-center"
+					>
+						<h2 id="social-proof-heading" className="sr-only">
+							Social Proof
+						</h2>
+						<EnhancedScrollAnimation
+							animation="zoom-out"
+							duration={800}
+							threshold={0.2}
+							once={false}
+						>
+							<SocialProofSection />
+						</EnhancedScrollAnimation>
+					</section>
 					<Footer />
 				</div>
 			</div>
