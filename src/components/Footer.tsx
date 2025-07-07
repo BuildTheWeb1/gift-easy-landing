@@ -6,7 +6,7 @@ const Footer = () => {
 					href="https://x.com/buildtheweb1"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="inline-flex items-center hover:underline"
+					className="inline-flex items-center hover:scale-110 transition-all duration-300"
 				>
 					follow on{" "}
 					<svg
