@@ -1,9 +1,10 @@
+import HeroSection from "@/components/HeroSection";
 import FAQSection from "../components/FAQSection";
 import FeaturesSection from "../components/FeaturesSection";
 import Footer from "../components/Footer";
-import HeroSection from "../components/HeroSection";
 import ScrollAnimation from "../components/ScrollAnimation";
 import SocialProofSection from "../components/SocialProofSection";
+import HowItWorks from "../components/HowItWorks";
 
 export default function Home() {
 	return (
@@ -14,6 +15,20 @@ export default function Home() {
 					<section aria-labelledby="hero-heading" className="mb-12 md:mb-20">
 						<ScrollAnimation>
 							<HeroSection />
+						</ScrollAnimation>
+					</section>
+
+					{/* How It Works Section */}
+					<section
+						id="how-it-works"
+						aria-labelledby="how-it-works-heading"
+						className="mb-12 md:mb-20"
+					>
+						<h2 id="how-it-works-heading" className="sr-only">
+							How It Works
+						</h2>
+						<ScrollAnimation>
+							<HowItWorks />
 						</ScrollAnimation>
 					</section>
 
