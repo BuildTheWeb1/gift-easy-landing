@@ -8,11 +8,14 @@ import WhyChoose from "../components/WhyChoose";
 
 export default function Home() {
 	return (
-		<div className="min-h-screen bg-teal-gradient text-white">
-			<div className="container mx-auto px-4 pt-0 pb-10 md:py-16 flex flex-col items-center justify-center min-h-screen">
+		<div className="bg-teal-gradient text-white">
+			<div className="container mx-auto px-4">
 				<main>
 					{/* Hero Section */}
-					<section aria-labelledby="hero-heading" className="mb-12 md:mb-20">
+					<section
+						aria-labelledby="hero-heading"
+						className="h-screen flex items-center justify-center"
+					>
 						<ScrollAnimation>
 							<HeroSection />
 						</ScrollAnimation>
@@ -22,7 +25,7 @@ export default function Home() {
 					<section
 						id="how-it-works"
 						aria-labelledby="how-it-works-heading"
-						className="mb-12 md:mb-20"
+						className="h-screen flex items-center justify-center"
 					>
 						<h2 id="how-it-works-heading" className="sr-only">
 							How It Works
@@ -36,7 +39,7 @@ export default function Home() {
 					<section
 						id="why-choose"
 						aria-labelledby="why-choose-heading"
-						className="mb-12 md:mb-20"
+						className="h-screen flex items-center justify-center"
 					>
 						<h2 id="why-choose-heading" className="sr-only">
 							Why Choose GiftEasy
@@ -50,7 +53,7 @@ export default function Home() {
 					<section
 						id="faq"
 						aria-labelledby="faq-heading"
-						className="mb-12 md:mb-20"
+						className="h-screen flex items-center justify-center"
 					>
 						<ScrollAnimation>
 							<FAQSection />
@@ -61,7 +64,7 @@ export default function Home() {
 					<section
 						id="social-proof"
 						aria-labelledby="social-proof-heading"
-						className="mb-12 md:mb-20"
+						className="h-screen flex items-center justify-center"
 					>
 						<h2 id="social-proof-heading" className="sr-only">
 							Social Proof
@@ -73,7 +76,7 @@ export default function Home() {
 				</main>
 
 				{/* Footer */}
-				<div className="transition-all duration-700 ease-in-out transform translate-y-0">
+				<div className="py-8 transition-all duration-700 ease-in-out transform translate-y-0">
 					<Footer />
 				</div>
 			</div>
