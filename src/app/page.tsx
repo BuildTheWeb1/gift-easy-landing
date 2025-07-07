@@ -1,5 +1,5 @@
 import HeroSection from "@/components/Hero/HeroSection";
-import ScrollAnimation from "@/components/ScrollAnimation";
+import EnhancedScrollAnimation from "@/components/EnhancedScrollAnimation";
 import SocialProofSection from "@/components/SocialProofSection";
 import FAQSection from "../components/FAQSection";
 import Footer from "../components/Footer";
@@ -16,9 +16,9 @@ export default function Home() {
 						aria-labelledby="hero-heading"
 						className="h-screen flex items-center justify-center"
 					>
-						<ScrollAnimation>
+						<EnhancedScrollAnimation animation="fade-up" duration={800} once={false}>
 							<HeroSection />
-						</ScrollAnimation>
+						</EnhancedScrollAnimation>
 					</section>
 
 					{/* How It Works Section */}
@@ -30,9 +30,9 @@ export default function Home() {
 						<h2 id="how-it-works-heading" className="sr-only">
 							How It Works
 						</h2>
-						<ScrollAnimation>
+						<EnhancedScrollAnimation animation="fade-left" duration={800} threshold={0.2} once={false}>
 							<HowItWorks />
-						</ScrollAnimation>
+						</EnhancedScrollAnimation>
 					</section>
 
 					{/* Why Choose Section */}
@@ -44,9 +44,9 @@ export default function Home() {
 						<h2 id="why-choose-heading" className="sr-only">
 							Why Choose GiftEasy
 						</h2>
-						<ScrollAnimation>
+						<EnhancedScrollAnimation animation="fade-right" duration={800} threshold={0.2} once={false}>
 							<WhyChoose />
-						</ScrollAnimation>
+						</EnhancedScrollAnimation>
 					</section>
 
 					{/* FAQ Section */}
@@ -55,9 +55,9 @@ export default function Home() {
 						aria-labelledby="faq-heading"
 						className="h-screen flex items-center justify-center"
 					>
-						<ScrollAnimation>
+						<EnhancedScrollAnimation animation="zoom-in" duration={800} threshold={0.2} once={false}>
 							<FAQSection />
-						</ScrollAnimation>
+						</EnhancedScrollAnimation>
 					</section>
 
 					{/* Social Proof Section */}
@@ -69,9 +69,9 @@ export default function Home() {
 						<h2 id="social-proof-heading" className="sr-only">
 							Social Proof
 						</h2>
-						<ScrollAnimation>
+						<EnhancedScrollAnimation animation="zoom-out" duration={800} threshold={0.2} once={false}>
 							<SocialProofSection />
-						</ScrollAnimation>
+						</EnhancedScrollAnimation>
 					</section>
 				</main>
 
