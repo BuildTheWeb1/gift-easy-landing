@@ -2,9 +2,9 @@ import HeroSection from "@/components/Hero/HeroSection";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import SocialProofSection from "@/components/SocialProofSection";
 import FAQSection from "../components/FAQSection";
-import FeaturesSection from "../components/FeaturesSection";
 import Footer from "../components/Footer";
 import HowItWorks from "../components/HowItWorks";
+import WhyChoose from "../components/WhyChoose";
 
 export default function Home() {
 	return (
@@ -32,17 +32,17 @@ export default function Home() {
 						</ScrollAnimation>
 					</section>
 
-					{/* Features Section */}
+					{/* Why Choose Section */}
 					<section
-						id="features"
-						aria-labelledby="features-heading"
+						id="why-choose"
+						aria-labelledby="why-choose-heading"
 						className="mb-12 md:mb-20"
 					>
-						<h2 id="features-heading" className="sr-only">
-							Our Features
+						<h2 id="why-choose-heading" className="sr-only">
+							Why Choose GiftEasy
 						</h2>
 						<ScrollAnimation>
-							<FeaturesSection />
+							<WhyChoose />
 						</ScrollAnimation>
 					</section>
 
