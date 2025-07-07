@@ -1,14 +1,14 @@
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/Hero/HeroSection";
+import ScrollAnimation from "@/components/ScrollAnimation";
+import SocialProofSection from "@/components/SocialProofSection";
 import FAQSection from "../components/FAQSection";
 import FeaturesSection from "../components/FeaturesSection";
 import Footer from "../components/Footer";
-import ScrollAnimation from "../components/ScrollAnimation";
-import SocialProofSection from "../components/SocialProofSection";
 import HowItWorks from "../components/HowItWorks";
 
 export default function Home() {
 	return (
-		<div className="min-h-screen bg-gift-gradient text-white">
+		<div className="min-h-screen bg-teal-gradient text-white">
 			<div className="container mx-auto px-4 pt-0 pb-10 md:py-16 flex flex-col items-center justify-center min-h-screen">
 				<main>
 					{/* Hero Section */}

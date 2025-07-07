@@ -70,6 +70,15 @@
 	background: linear-gradient(155deg, var(--gift-pink-light), var(--gift-pink));
 }
 
+.bg-teal-gradient {
+	background: linear-gradient(
+		to bottom right,
+		#5eead4, /* teal-300 */
+		#2dd4bf, /* teal-400 */
+		#5eead4  /* teal-300 */
+	);
+}
+
 /* Animation utilities */
 .animate-in {
 	opacity: 1 !important;
