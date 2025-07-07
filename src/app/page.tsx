@@ -46,6 +46,17 @@ export default function Home() {
 						</ScrollAnimation>
 					</section>
 
+					{/* FAQ Section */}
+					<section
+						id="faq"
+						aria-labelledby="faq-heading"
+						className="mb-12 md:mb-20"
+					>
+						<ScrollAnimation>
+							<FAQSection />
+						</ScrollAnimation>
+					</section>
+
 					{/* Social Proof Section */}
 					<section
 						id="social-proof"
@@ -57,17 +68,6 @@ export default function Home() {
 						</h2>
 						<ScrollAnimation>
 							<SocialProofSection />
-						</ScrollAnimation>
-					</section>
-
-					{/* FAQ Section */}
-					<section
-						id="faq"
-						aria-labelledby="faq-heading"
-						className="mb-12 md:mb-20"
-					>
-						<ScrollAnimation>
-							<FAQSection />
 						</ScrollAnimation>
 					</section>
 				</main>

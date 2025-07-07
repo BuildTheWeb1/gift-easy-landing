@@ -1,4 +1,4 @@
-import { heroPills } from "@/app/data/hero";
+import { heroPills } from "@/app/data/heroData";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
