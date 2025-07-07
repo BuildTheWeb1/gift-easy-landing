@@ -1,15 +1,13 @@
 "use client";
 import { faqItems } from "@/app/data/faqData";
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { useState } from "react";
+import {
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const FAQSection = () => {
-	const [openFAQ, setOpenFAQ] = useState<string>("how-does-ai-work");
-
-	const toggleFAQ = (id: string) => {
-		setOpenFAQ(openFAQ === id ? "" : id);
-	};
-
 	return (
 		<section className="py-20 px-4">
 			<div className="container mx-auto max-w-3xl">
@@ -22,40 +20,29 @@ const FAQSection = () => {
 					</p>
 				</div>
 
-				<div className="space-y-4">
+				<Accordion
+					type="single"
+					collapsible
+					defaultValue="how-does-ai-work"
+					className="w-full"
+				>
 					{faqItems.map((faq) => (
-						<div
+						<AccordionItem
 							key={faq.id}
-							className="bg-white rounded-lg overflow-hidden shadow-sm"
+							value={faq.id}
+							className="mb-4 bg-white rounded-lg shadow-sm"
 						>
-							<button
-								type="button"
-								className="w-full flex items-center justify-between p-5 text-left focus:outline-none"
-								onClick={() => toggleFAQ(faq.id)}
-								aria-expanded={openFAQ === faq.id}
-								aria-controls={`faq-answer-${faq.id}`}
-							>
-								<span className="font-medium text-gray-900">
+							<AccordionTrigger className="px-5 py-4 hover:no-underline">
+								<div className="font-medium text-gray-900 text-left">
 									{faq.question}
-								</span>
-								{openFAQ === faq.id ? (
-									<ChevronUp className="h-5 w-5 text-gray-500" />
-								) : (
-									<ChevronDown className="h-5 w-5 text-gray-500" />
-								)}
-							</button>
-
-							{openFAQ === faq.id && (
-								<div
-									id={`faq-answer-${faq.id}`}
-									className="px-5 pb-5 text-gray-600"
-								>
-									<p>{faq.answer}</p>
 								</div>
-							)}
-						</div>
+							</AccordionTrigger>
+							<AccordionContent className="px-5 text-gray-600">
+								<p>{faq.answer}</p>
+							</AccordionContent>
+						</AccordionItem>
 					))}
-				</div>
+				</Accordion>
 			</div>
 		</section>
 	);
