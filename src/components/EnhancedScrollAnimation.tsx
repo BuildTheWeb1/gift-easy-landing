@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 type AnimationType = 'fade-up' | 'fade-down' | 'fade-left' | 'fade-right' | 'zoom-in' | 'zoom-out' | 'flip';
 
@@ -26,6 +27,9 @@ export default function EnhancedScrollAnimation({
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  
+  // Use the media query hook to detect mobile devices
+  const isMobile = useMediaQuery('(max-width: 767px)');
 
   useEffect(() => {
     setIsMounted(true);
@@ -58,13 +62,19 @@ export default function EnhancedScrollAnimation({
     };
   }, [once, threshold]);
 
-  // Get animation classes based on animation type
+  // Get animation classes based on animation type and device
   const getAnimationClasses = () => {
     if (!isMounted) return ''; // No animation classes during SSR
     
     const baseClasses = 'transition-all ease-out';
     
     if (!isVisible) {
+      // On mobile, always use fade-up animation to prevent horizontal scrolling
+      if (isMobile && (animation === 'fade-left' || animation === 'fade-right')) {
+        return `${baseClasses} opacity-0 translate-y-10`;
+      }
+      
+      // On desktop, use the specified animation
       switch (animation) {
         case 'fade-up':
           return `${baseClasses} opacity-0 translate-y-10`;

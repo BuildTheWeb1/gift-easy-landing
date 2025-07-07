@@ -14,7 +14,7 @@ export default function Home() {
 					{/* Hero Section */}
 					<section
 						aria-labelledby="hero-heading"
-						className="h-screen flex items-center justify-center"
+						className="md:h-screen flex items-center justify-center"
 					>
 						<EnhancedScrollAnimation
 							animation="fade-up"
@@ -29,7 +29,7 @@ export default function Home() {
 					<section
 						id="how-it-works"
 						aria-labelledby="how-it-works-heading"
-						className="h-screen flex items-center justify-center"
+						className="md:h-screen flex items-center justify-center"
 					>
 						<h2 id="how-it-works-heading" className="sr-only">
 							How It Works
@@ -48,7 +48,7 @@ export default function Home() {
 					<section
 						id="why-choose"
 						aria-labelledby="why-choose-heading"
-						className="h-screen flex items-center justify-center"
+						className="md:h-screen flex items-center justify-center"
 					>
 						<h2 id="why-choose-heading" className="sr-only">
 							Why Choose GiftEasy
@@ -67,7 +67,7 @@ export default function Home() {
 					<section
 						id="faq"
 						aria-labelledby="faq-heading"
-						className="h-screen flex items-center justify-center"
+						className="md:h-screen flex items-center justify-center"
 					>
 						<EnhancedScrollAnimation
 							animation="zoom-in"
