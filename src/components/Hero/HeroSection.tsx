@@ -22,7 +22,7 @@ const HeroSection = () => {
 				<h1 className="text-5xl md:text-6xl text-shadow-xs font-bold mb-4">
 					Perfect Gift Ideas
 					<br />
-					<span className="text-pink-500">Easy</span>
+					<span className="text-pink-400 text-shadow-xs">Easy</span>
 				</h1>
 				<p className="text-lg md:text-xl text-shadow-xs max-w-2xl mx-auto mb-8">
 					Let our AI find the perfect gift for any occasion. Just tell us about
@@ -38,7 +38,7 @@ const HeroSection = () => {
 				<div className="flex flex-wrap justify-center gap-4">
 					<Button
 						asChild
-						className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-8 py-6 rounded-full text-lg font-medium hover:opacity-90 transition-all duration-300"
+						className="bg-gradient-to-r from-pink-500 to-rose-400 text-white px-8 py-6 rounded-full text-lg font-medium hover:opacity-90 transition-all duration-300"
 					>
 						<Link href="https://app.gift-easy.com/">
 							Get Gift Ideas Now
