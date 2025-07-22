@@ -7,7 +7,7 @@ import { HeroPills } from "./HeroPills";
 const HeroSection = () => {
 	return (
 		<div className="max-w-6xl mx-auto text-center py-16 px-4">
-			<div className="flex justify-center items-center mb-4">
+			<div className="flex justify-center items-center">
 				<Image
 					src="/GiftEasy-logo.svg"
 					alt="Gift Easy logo"
@@ -18,13 +18,13 @@ const HeroSection = () => {
 				/>
 			</div>
 
-			<div className="mt-16 mb-8">
-				<h1 className="text-5xl md:text-6xl text-shadow-xs font-bold mb-4">
+			<div className="mt-10 mb-8">
+				<h1 className="text-3xl md:text-5xl text-shadow-xs font-bold mb-4">
 					Perfect Gift Ideas
 					<br />
-					<span className="text-pink-400 text-shadow-xs">Easy</span>
+					<span className="text-pink-400 italic text-shadow-xs">...Easy</span>
 				</h1>
-				<p className="text-lg md:text-xl text-shadow-xs max-w-2xl mx-auto mb-8">
+				<p className="text-lg md:text-xl text-shadow-xs max-w-2xl mx-auto my-8">
 					Let our AI find the perfect gift for any occasion. Just tell us about
 					the person and the event - we'll handle the rest.
 				</p>
@@ -38,7 +38,7 @@ const HeroSection = () => {
 				<div className="flex flex-wrap justify-center gap-4">
 					<Button
 						asChild
-						className="bg-gradient-to-r from-pink-500 to-rose-400 text-zinc-50 py-6 rounded-full text-lg font-medium w-64 hover:opacity-90 transition-all duration-300"
+						className="bg-gradient-to-r from-pink-500 to-rose-400 text-zinc-50 py-6 rounded-full text-lg font-medium w-64 hover:scale-110 transition-all duration-300"
 					>
 						<Link href="https://app.gift-easy.com/">
 							Get Gift Ideas Now

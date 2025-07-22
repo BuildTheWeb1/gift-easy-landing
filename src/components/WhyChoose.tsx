@@ -9,7 +9,7 @@ const WhyChoose = () => {
 						Why Choose GiftEasy?
 					</h2>
 					<p className="text-lg text-zinc-800 text-shadow-sm max-w-3xl mx-auto">
-						Stop the gift-giving stress. Our AI makes finding the perfect
+						Stop the gift-giving stress. <br /> Our AI makes finding the perfect
 						present effortless and enjoyable.
 					</p>
 				</div>
@@ -18,7 +18,7 @@ const WhyChoose = () => {
 					{whyChooseFeatures.map((feature) => (
 						<div
 							key={feature.id}
-							className="bg-white rounded-lg p-8 shadow-md flex flex-col items-center text-center"
+							className="bg-white rounded-lg p-4 md:p-8 shadow-md flex flex-col items-center text-center"
 						>
 							<div
 								className={`w-16 h-16 ${feature.iconBgColor} rounded-lg flex items-center justify-center mb-6`}

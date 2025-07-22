@@ -31,7 +31,7 @@ const HowItWorks = () => {
 								</div>
 
 								{/* Content Card */}
-								<div className="flex-1 bg-white rounded-lg shadow-md p-6 relative">
+								<div className="flex-1 bg-white rounded-lg shadow-md p-4 md:p-6 relative">
 									<h3 className="text-2xl font-bold text-black mb-2">
 										{step.title}
 									</h3>
