@@ -12,10 +12,10 @@ const FAQSection = () => {
 		<section className="py-20 px-4">
 			<div className="container mx-auto max-w-3xl">
 				<div className="text-center mb-16">
-					<h2 className="text-4xl font-bold mb-4 text-white text-shadow-sm">
+					<h2 className="text-4xl font-bold mb-4 text-zinc-800 text-shadow-sm">
 						Frequently Asked Questions
 					</h2>
-					<p className="text-lg text-white text-shadow-sm">
+					<p className="text-lg text-zinc-800 text-shadow-sm">
 						Everything you need to know about finding perfect gifts with AI.
 					</p>
 				</div>

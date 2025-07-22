@@ -6,7 +6,7 @@ const HowItWorks = () => {
 			<div className="container mx-auto max-w-5xl">
 				<div className="text-center mb-16">
 					<h2 className="text-4xl font-bold mb-4">How It Works</h2>
-					<p className="text-lg text-white text-shadow-sm">
+					<p className="text-lg text-zinc-800 text-shadow-sm">
 						Three simple steps to find the perfect gift every time. It's really
 						that easy.
 					</p>
@@ -19,7 +19,7 @@ const HowItWorks = () => {
 							<div key={step.id} className="flex items-start gap-6 relative">
 								{/* Number and Icon Column */}
 								<div className="flex flex-col items-center gap-2">
-									<div className="w-14 h-14 rounded-full bg-pink-500 flex items-center justify-center text-white text-xl font-bold">
+									<div className="w-14 h-14 rounded-full bg-pink-500 flex items-center justify-center text-zinc-50 text-xl font-bold">
 										{step.id}
 									</div>
 									<div className="h-full flex flex-col items-center">

@@ -8,7 +8,7 @@ import WhyChoose from "../components/WhyChoose";
 
 export default function Home() {
 	return (
-		<div className="bg-teal-gradient text-white">
+		<div className="bg-teal-gradient text-zinc-800">
 			<div className="container mx-auto px-4">
 				<main>
 					{/* Hero Section */}

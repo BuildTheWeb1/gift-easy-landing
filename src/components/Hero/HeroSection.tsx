@@ -38,7 +38,7 @@ const HeroSection = () => {
 				<div className="flex flex-wrap justify-center gap-4">
 					<Button
 						asChild
-						className="bg-gradient-to-r from-pink-500 to-rose-400 text-white px-8 py-6 rounded-full text-lg font-medium hover:opacity-90 transition-all duration-300"
+						className="bg-gradient-to-r from-pink-500 to-rose-400 text-zinc-50 py-6 rounded-full text-lg font-medium w-64 hover:opacity-90 transition-all duration-300"
 					>
 						<Link href="https://app.gift-easy.com/">
 							Get Gift Ideas Now
@@ -60,7 +60,7 @@ const HeroSection = () => {
 				</div>
 			</div>
 
-			<p className="text-sm text-white text-shadow-xs mt-4">
+			<p className="text-sm text-zinc-800 text-shadow-xs mt-4">
 				Easy to use • No signup required • Instant results
 			</p>
 		</div>
