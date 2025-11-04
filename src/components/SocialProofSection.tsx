@@ -21,7 +21,7 @@ const SocialProofSection = () => {
 						height="54"
 					/>
 				</a>
-				<a href="https://trustmrr.com/startup/webspace-ai-media" target="_blank"><img src="https://trustmrr.com/api/embed/webspace-ai-media?format=svg" alt="TrustMRR verified revenue badge" width="220" height="90" /></a>
+				<a href="https://trustmrr.com/startup/gifteasy" target="_blank"><img src="https://trustmrr.com/api/embed/gifteasy?format=svg" alt="TrustMRR verified revenue badge" width="220" height="90" /></a>
 			</div>
 		</section>
 	);
