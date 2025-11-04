@@ -21,19 +21,7 @@ const SocialProofSection = () => {
 						height="54"
 					/>
 				</a>
-				<a
-					href="https://www.uneed.best/tool/gifteasy"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="hover:opacity-90 transition-all duration-300 transform hover:-translate-y-1"
-				>
-					<img
-						src="https://www.uneed.best/EMBED3B.png"
-						alt="Uneed Embed Badge"
-						width="250"
-						height="54"
-					/>
-				</a>
+				<a href="https://trustmrr.com/startup/app-webspace-s-r-l" target="_blank"><img src="https://trustmrr.com/api/embed/app-webspace-s-r-l?format=svg" alt="TrustMRR verified revenue badge" width="250" height="54" /></a>
 			</div>
 		</section>
 	);
