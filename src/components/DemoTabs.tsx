@@ -81,39 +81,49 @@ export default function DemoTabs({ scenarios }: DemoTabsProps) {
 
 	return (
 		<div className="space-y-6">
-			<div
-				className="flex flex-wrap gap-3"
-				role="tablist"
-				aria-label="Gift recommendation examples"
-			>
-				{scenarios.map((scenario, index) => {
-					const isActive = scenario.id === activeScenario.id;
+			<div className="relative">
+				<p
+					id="demo-tablist-hint"
+					className="mb-3 text-sm text-stone-600 sm:hidden"
+				>
+					Swipe to see more example scenarios.
+				</p>
+				<div
+					className="flex snap-x gap-3 overflow-x-auto pb-2 pr-8 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+					role="tablist"
+					aria-label="Gift recommendation examples"
+					aria-describedby="demo-tablist-hint"
+				>
+					{scenarios.map((scenario, index) => {
+						const isActive = scenario.id === activeScenario.id;
 
-					return (
-						<button
-							key={scenario.id}
-							ref={(element) => {
-								tabRefs.current[index] = element;
-							}}
-							type="button"
-							role="tab"
-							aria-selected={isActive}
-							aria-controls={`panel-${scenario.id}`}
-							id={`tab-${scenario.id}`}
-							onClick={() => handleSelect(scenario.id)}
-							onKeyDown={(event) => handleKeyDown(event, index, scenario.id)}
-							tabIndex={isActive ? 0 : -1}
-							className={cn(
-								"touch-manipulation rounded-full border px-4 py-2 text-sm font-medium transition-[background-color,border-color,color,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2",
-								isActive
-									? "border-stone-950 bg-stone-950 text-stone-50 shadow-sm"
-									: "border-stone-300 bg-white/80 text-stone-700 hover:border-stone-500 hover:bg-white",
-							)}
-						>
-							{scenario.label}
-						</button>
-					);
-				})}
+						return (
+							<button
+								key={scenario.id}
+								ref={(element) => {
+									tabRefs.current[index] = element;
+								}}
+								type="button"
+								role="tab"
+								aria-selected={isActive}
+								aria-controls={`panel-${scenario.id}`}
+								id={`tab-${scenario.id}`}
+								onClick={() => handleSelect(scenario.id)}
+								onKeyDown={(event) => handleKeyDown(event, index, scenario.id)}
+								tabIndex={isActive ? 0 : -1}
+								className={cn(
+									"shrink-0 snap-start touch-manipulation rounded-full border px-4 py-2 text-sm font-medium transition-[background-color,border-color,color,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2",
+									isActive
+										? "border-stone-950 bg-stone-950 text-stone-50 shadow-sm"
+										: "border-stone-300 bg-white/80 text-stone-700 hover:border-stone-500 hover:bg-white",
+								)}
+							>
+								{scenario.label}
+							</button>
+						);
+					})}
+				</div>
+				<div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[#f4efe6] via-[#f4efe6]/88 to-transparent" />
 			</div>
 
 			<div
@@ -142,12 +152,12 @@ export default function DemoTabs({ scenarios }: DemoTabsProps) {
 					</div>
 				</div>
 
-				<div className="rounded-[2rem] border border-stone-200 bg-white/92 p-4 shadow-[0_24px_60px_rgba(28,25,23,0.08)] sm:p-6">
+				<div className="min-w-0 overflow-hidden rounded-[2rem] border border-stone-200 bg-white/92 p-4 shadow-[0_24px_60px_rgba(28,25,23,0.08)] sm:p-6">
 					<div className="space-y-4">
 						{activeScenario.results.map((result) => (
 							<article
 								key={result.title}
-								className="rounded-[1.5rem] border border-stone-200 bg-stone-50 p-5"
+								className="w-full min-w-0 rounded-[1.5rem] border border-stone-200 bg-stone-50 p-5"
 							>
 								<p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
 									Thoughtful Match
@@ -158,12 +168,12 @@ export default function DemoTabs({ scenarios }: DemoTabsProps) {
 								<p className="mt-3 text-pretty leading-7 text-stone-700">
 									{result.hook}
 								</p>
-								<div className="mt-4 flex items-center justify-between gap-4">
+								<div className="mt-4 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
 									<p className="font-semibold text-stone-950">{result.price}</p>
 									<Button
 										asChild
-										variant="ghost"
-										className="h-auto rounded-full px-0 text-sm font-semibold text-stone-950 hover:bg-transparent hover:text-amber-700"
+										variant="outline"
+										className="h-11 rounded-full border-stone-300 bg-white px-4 text-sm font-semibold text-stone-950 hover:border-stone-500 hover:bg-white"
 									>
 										<Link href={result.href}>Try this scenario</Link>
 									</Button>

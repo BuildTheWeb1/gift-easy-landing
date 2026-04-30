@@ -32,19 +32,22 @@ function DemoTabsFallback() {
 
 	return (
 		<div className="space-y-6">
-			<div className="flex flex-wrap gap-3">
-				{demoScenarios.map((scenario, index) => (
-					<span
-						key={scenario.id}
-						className={`rounded-full border px-4 py-2 text-sm font-medium ${
-							index === 0
-								? "border-stone-950 bg-stone-950 text-stone-50"
-								: "border-stone-300 bg-white/80 text-stone-700"
-						}`}
-					>
-						{scenario.label}
-					</span>
-				))}
+			<div className="relative">
+				<div className="flex snap-x gap-3 overflow-x-auto pb-2 pr-8 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+					{demoScenarios.map((scenario, index) => (
+						<span
+							key={scenario.id}
+							className={`shrink-0 snap-start rounded-full border px-4 py-2 text-sm font-medium ${
+								index === 0
+									? "border-stone-950 bg-stone-950 text-stone-50"
+									: "border-stone-300 bg-white/80 text-stone-700"
+							}`}
+						>
+							{scenario.label}
+						</span>
+					))}
+				</div>
+				<div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[#f4efe6] via-[#f4efe6]/88 to-transparent" />
 			</div>
 			<div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
 				<div className="rounded-[2rem] border border-stone-200 bg-stone-950 p-6 text-stone-50 shadow-[0_24px_60px_rgba(28,25,23,0.12)]">
@@ -55,12 +58,12 @@ function DemoTabsFallback() {
 						&ldquo;{fallbackScenario.input}&rdquo;
 					</p>
 				</div>
-				<div className="rounded-[2rem] border border-stone-200 bg-white/92 p-4 shadow-[0_24px_60px_rgba(28,25,23,0.08)] sm:p-6">
+				<div className="min-w-0 overflow-hidden rounded-[2rem] border border-stone-200 bg-white/92 p-4 shadow-[0_24px_60px_rgba(28,25,23,0.08)] sm:p-6">
 					<div className="space-y-4">
 						{fallbackScenario.results.map((result) => (
 							<article
 								key={result.title}
-								className="rounded-[1.5rem] border border-stone-200 bg-stone-50 p-5"
+								className="w-full min-w-0 rounded-[1.5rem] border border-stone-200 bg-stone-50 p-5"
 							>
 								<p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
 									Thoughtful Match
@@ -96,10 +99,10 @@ export default function LandingPage() {
 				Skip to content
 			</a>
 			<header className="sticky top-0 z-40 border-b border-white/55 bg-[#faf6ef]/80 backdrop-blur-xl">
-				<div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+				<div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:gap-4 sm:px-6 lg:px-8">
 					<Link
 						href="/"
-						className="flex items-center gap-3 rounded-full focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
+						className="min-w-0 flex items-center gap-3 rounded-full focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
 					>
 						<Image
 							src="/GiftEasy-logo.svg"
@@ -108,14 +111,19 @@ export default function LandingPage() {
 							height={42}
 							priority
 						/>
-						<span className="font-display text-2xl tracking-tight">GiftEasy</span>
+						<span className="hidden font-display text-2xl tracking-tight sm:inline">
+							GiftEasy
+						</span>
 					</Link>
 					<Button
 						asChild
 						size="lg"
-						className="h-12 rounded-full bg-stone-950 px-5 text-sm font-semibold text-stone-50 shadow-[0_18px_30px_rgba(28,25,23,0.16)] hover:bg-stone-800"
+						className="h-11 rounded-full bg-stone-950 px-3 text-sm font-semibold text-stone-50 shadow-[0_18px_30px_rgba(28,25,23,0.16)] hover:bg-stone-800 sm:h-12 sm:px-5"
 					>
-						<Link href={primaryCtaHref}>Find Gift Ideas</Link>
+						<Link href={primaryCtaHref}>
+							<span className="sm:hidden">Find Gifts</span>
+							<span className="hidden sm:inline">Find Gift Ideas</span>
+						</Link>
 					</Button>
 				</div>
 			</header>
@@ -126,7 +134,7 @@ export default function LandingPage() {
 							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
 								Stop guessing. Start gifting.
 							</p>
-							<h1 className="mt-5 max-w-[12ch] text-balance font-display text-[clamp(3.25rem,7vw,6.1rem)] leading-[0.95] tracking-[-0.04em]">
+							<h1 className="mt-5 max-w-[12ch] text-balance font-display text-[clamp(2rem,7vw,6.1rem)] leading-[1.05] tracking-[-0.04em]">
 								The gift they&rsquo;ll actually love, found in under 30 seconds.
 							</h1>
 							<p className="mt-6 max-w-2xl text-pretty text-lg leading-8 text-stone-700">
@@ -164,9 +172,9 @@ export default function LandingPage() {
 						<div className="relative">
 							<div className="absolute inset-x-8 top-8 -z-10 h-48 rounded-full bg-amber-200/45 blur-3xl" />
 							<div className="rounded-[2.3rem] border border-white/65 bg-white/84 p-4 shadow-[0_30px_80px_rgba(28,25,23,0.13)] sm:p-6">
-								<div className="rounded-[1.9rem] border border-stone-200 bg-stone-950 p-6 text-stone-50">
+								<div className="rounded-[1.9rem] border border-stone-200 bg-stone-950 p-5 text-stone-50 sm:p-6">
 									<div className="flex items-center justify-between gap-3">
-										<p className="text-xs font-semibold uppercase tracking-[0.22em] text-amber-300">
+										<p className="whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-300 sm:text-xs sm:tracking-[0.22em]">
 											Product Preview
 										</p>
 										<span className="rounded-full border border-white/10 px-3 py-1 text-xs text-stone-300">
@@ -181,17 +189,20 @@ export default function LandingPage() {
 										after the form is complete.
 									</p>
 								</div>
-								<div className="mt-4 grid gap-4 sm:grid-cols-2">
+								<div className="mt-4">
+									<h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-amber-700">
+										What you get
+									</h3>
+								</div>
+								<div className="mt-3 grid gap-3 sm:grid-cols-2">
 									{heroStats.map((item, index) => (
 										<div
 											key={item}
 											className={index === 0 ? "sm:col-span-2" : undefined}
 										>
-											<div className="rounded-[1.7rem] border border-stone-200 bg-stone-50 p-5">
-												<p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
-													What you get
-												</p>
-												<p className="mt-3 font-display text-2xl leading-tight">
+											<div className="rounded-[1.7rem] border border-stone-200 bg-stone-50 p-4 sm:p-5">
+												<p className="flex items-center gap-3 font-display text-lg leading-tight sm:text-[1.35rem]">
+													<span className="inline-block size-2 rounded-full bg-amber-500" />
 													{item}
 												</p>
 											</div>
@@ -211,7 +222,7 @@ export default function LandingPage() {
 							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
 								Live Demo
 							</p>
-							<h2 className="mt-4 text-balance font-display text-[clamp(2.4rem,5vw,4rem)] leading-[0.98] tracking-[-0.03em]">
+							<h2 className="mt-4 text-balance font-display text-[clamp(2.25rem,4.8vw,3.7rem)] leading-[1] tracking-[-0.03em]">
 								Here&rsquo;s what GiftEasy actually finds.
 							</h2>
 							<p className="mt-4 text-pretty text-lg leading-8 text-stone-700">
@@ -228,7 +239,7 @@ export default function LandingPage() {
 							<Button
 								asChild
 								size="lg"
-								className="h-14 rounded-full bg-amber-400 px-7 text-base font-semibold text-stone-950 hover:bg-amber-300"
+								className="h-14 rounded-full bg-stone-950 px-7 text-base font-semibold text-stone-50 hover:bg-stone-800"
 							>
 								<Link href={primaryCtaHref}>Get Ideas Like These</Link>
 							</Button>
@@ -241,7 +252,7 @@ export default function LandingPage() {
 							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
 								How It Works
 							</p>
-							<h2 className="mt-4 text-balance font-display text-[clamp(2.35rem,4vw,3.7rem)] leading-[1] tracking-[-0.03em]">
+							<h2 className="mt-4 text-balance font-display text-[clamp(2.15rem,3.8vw,3.25rem)] leading-[1.02] tracking-[-0.03em]">
 								Short form in. Strong gift ideas out.
 							</h2>
 						</div>
@@ -272,7 +283,7 @@ export default function LandingPage() {
 							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
 								We&rsquo;ve All Been There
 							</p>
-							<h2 className="mt-4 text-balance font-display text-[clamp(2.35rem,4vw,3.8rem)] leading-[1] tracking-[-0.03em]">
+							<h2 className="mt-4 text-balance font-display text-[clamp(2.2rem,3.9vw,3.35rem)] leading-[1.02] tracking-[-0.03em]">
 								GiftEasy was built for the awkward, last-minute, impossible cases.
 							</h2>
 						</div>
@@ -309,7 +320,7 @@ export default function LandingPage() {
 								<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">
 									Social Proof
 								</p>
-								<h2 className="mt-4 text-balance font-display text-[clamp(2.3rem,4vw,3.6rem)] leading-[1] tracking-[-0.03em]">
+								<h2 className="mt-4 text-balance font-display text-[clamp(2.15rem,3.8vw,3.2rem)] leading-[1.02] tracking-[-0.03em]">
 									People are finding better gifts, faster.
 								</h2>
 								<div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
@@ -332,12 +343,17 @@ export default function LandingPage() {
 										key={testimonial.name}
 										className="flex h-full flex-col rounded-[1.8rem] border border-white/12 bg-white/6 p-6"
 									>
+										<p aria-hidden="true" className="text-sm tracking-[0.2em] text-amber-300">
+											★★★★★
+										</p>
+										<p className="sr-only">Five-star feedback</p>
 										<p className="flex-1 text-pretty leading-7 text-stone-100">
 											&ldquo;{testimonial.quote}&rdquo;
 										</p>
-										<p className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-amber-300">
+										<p className="mt-6 text-sm font-semibold text-stone-50">
 											{testimonial.name}
 										</p>
+										<p className="mt-1 text-sm text-stone-400">{testimonial.source}</p>
 									</article>
 								))}
 							</div>
@@ -350,7 +366,7 @@ export default function LandingPage() {
 							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
 								Occasions
 							</p>
-							<h2 className="mt-4 text-balance font-display text-[clamp(2.35rem,4vw,3.8rem)] leading-[1] tracking-[-0.03em]">
+							<h2 className="mt-4 text-balance font-display text-[clamp(2.05rem,3.6vw,3rem)] leading-[1.03] tracking-[-0.03em]">
 								Gift ideas for every moment that matters.
 							</h2>
 						</div>
@@ -365,12 +381,11 @@ export default function LandingPage() {
 										{item.label}
 									</p>
 									<p className="mt-3 text-sm leading-6 text-stone-600">
-										Start with {item.occasion}
-										{item.relationship ? ` for ${item.relationship.toLowerCase()}` : ""}.
+										{item.description}
 									</p>
-									<p className="mt-5 text-sm font-semibold text-amber-700">
-										Open the form
-									</p>
+									<span className="mt-5 inline-flex h-11 items-center rounded-full border border-stone-300 bg-white px-4 text-sm font-semibold text-stone-950 transition-colors duration-200 group-hover:border-stone-500">
+										Open the form &rarr;
+									</span>
 								</Link>
 							))}
 						</div>
@@ -382,7 +397,7 @@ export default function LandingPage() {
 							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
 								FAQ
 							</p>
-							<h2 className="mt-4 text-balance font-display text-[clamp(2.35rem,4vw,3.8rem)] leading-[1] tracking-[-0.03em]">
+							<h2 className="mt-4 text-balance font-display text-[clamp(2rem,3.5vw,2.9rem)] leading-[1.03] tracking-[-0.03em]">
 								Questions? We&rsquo;ve got answers.
 							</h2>
 						</div>
@@ -414,7 +429,7 @@ export default function LandingPage() {
 						<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
 							Ready When You Are
 						</p>
-						<h2 className="mx-auto mt-4 max-w-3xl text-balance font-display text-[clamp(2.4rem,4vw,3.9rem)] leading-[1] tracking-[-0.03em]">
+						<h2 className="mx-auto mt-4 max-w-3xl text-balance font-display text-[clamp(2.2rem,3.8vw,3.4rem)] leading-[1.02] tracking-[-0.03em]">
 							Your person deserves a gift that means something.
 						</h2>
 						<p className="mx-auto mt-4 max-w-2xl text-pretty text-lg leading-8 text-stone-700">
@@ -442,6 +457,26 @@ export default function LandingPage() {
 						<p className="mt-2 text-sm text-stone-600">
 							Made for better gift-giving, not more guesswork.
 						</p>
+						<div className="mt-4 flex flex-wrap gap-3 text-sm text-stone-600">
+							<Link
+								href="https://www.producthunt.com/products/gift-easy"
+								className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 transition-colors duration-200 hover:text-stone-950 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
+							>
+								Product Hunt
+							</Link>
+							<Link
+								href="https://trustmrr.com/startup/gifteasy"
+								className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 transition-colors duration-200 hover:text-stone-950 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
+							>
+								TrustMRR
+							</Link>
+							<Link
+								href="https://x.com/buildtheweb1"
+								className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 transition-colors duration-200 hover:text-stone-950 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
+							>
+								X / Updates
+							</Link>
+						</div>
 					</div>
 					<div className="flex flex-wrap gap-4 text-sm text-stone-600">
 						{footerLinks.map((item) => (

@@ -20,6 +20,7 @@ export type OccasionLink = {
 	label: string;
 	occasion: string;
 	relationship?: string;
+	description: string;
 	href: string;
 };
 
@@ -170,16 +171,19 @@ export const proofStats = [
 export const testimonials = [
 	{
 		name: "Sarah M.",
+		source: "Shared by email",
 		quote:
 			"I described my dad as impossible to shop for, into golf, and allergic to gadgets. It suggested a lesson with a local pro. He loved it.",
 	},
 	{
 		name: "James K.",
+		source: "Shared after a retirement gift",
 		quote:
 			"Used it for my boss's retirement. The suggestions felt specific, not like another corporate basket roundup.",
 	},
 	{
 		name: "Alex T.",
+		source: "Shared after a birthday order",
 		quote:
 			"Found my girlfriend's birthday gift in two minutes. She cried. That is all I needed.",
 	},
@@ -189,64 +193,76 @@ export const occasionLinks: OccasionLink[] = [
 	{
 		label: "Birthday",
 		occasion: "Birthday",
+		description: "For the person who says they do not need anything and still deserves something thoughtful.",
 		href: "https://app.gift-easy.com/?occasion=Birthday",
 	},
 	{
 		label: "Anniversary",
 		occasion: "Anniversary",
+		description: "Find something that feels personal, not like a rushed backup plan.",
 		href: "https://app.gift-easy.com/?occasion=Anniversary",
 	},
 	{
 		label: "Christmas",
 		occasion: "Christmas",
+		description: "Cut through wish-list noise and land on a gift they will actually use.",
 		href: "https://app.gift-easy.com/?occasion=Christmas",
 	},
 	{
 		label: "Graduation",
 		occasion: "Graduation",
+		description: "Mark the milestone with something that feels optimistic and earned.",
 		href: "https://app.gift-easy.com/?occasion=Graduation",
 	},
 	{
 		label: "Baby Shower",
 		occasion: "Baby Shower",
+		description: "Choose a gift that feels useful for the parents and special for the moment.",
 		href: "https://app.gift-easy.com/?occasion=Baby%20Shower",
 	},
 	{
 		label: "Mother's Day",
 		occasion: "Mother's Day",
 		relationship: "Mom",
+		description: "Skip the generic flowers-and-candle routine and make it feel considered.",
 		href: "https://app.gift-easy.com/?occasion=Mother%27s%20Day&relationship=Mom",
 	},
 	{
 		label: "Housewarming",
 		occasion: "Housewarming",
+		description: "Find something that helps a new place start feeling like home.",
 		href: "https://app.gift-easy.com/?occasion=Housewarming",
 	},
 	{
 		label: "Retirement",
 		occasion: "Retirement",
+		description: "Celebrate the next chapter with a gift that feels meaningful, not obligatory.",
 		href: "https://app.gift-easy.com/?occasion=Retirement",
 	},
 	{
 		label: "Just Because",
 		occasion: "Just Because",
+		description: "For the thoughtful surprise that lands harder than any calendar reminder.",
 		href: "https://app.gift-easy.com/?occasion=Just%20Because",
 	},
 	{
 		label: "Valentine's",
 		occasion: "Valentine's Day",
 		relationship: "Partner",
+		description: "Find a romantic gift that feels specific to your person, not copy-pasted.",
 		href: "https://app.gift-easy.com/?occasion=Valentine%27s%20Day&relationship=Partner",
 	},
 	{
 		label: "Father's Day",
 		occasion: "Father's Day",
 		relationship: "Dad",
+		description: "Better than another mug, tie, or gadget he never asked for.",
 		href: "https://app.gift-easy.com/?occasion=Father%27s%20Day&relationship=Dad",
 	},
 	{
 		label: "Wedding",
 		occasion: "Wedding",
+		description: "Give them something that feels lasting instead of another registry filler.",
 		href: "https://app.gift-easy.com/?occasion=Wedding",
 	},
 ];
