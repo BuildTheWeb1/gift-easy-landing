@@ -6,51 +6,51 @@ export interface FAQItem {
 
 export const faqItems: FAQItem[] = [
 	{
-		id: "how-does-ai-work",
-		question: "How does GiftEasy's AI work?",
+		id: "is-gifteasy-free",
+		question: "Is GiftEasy really free?",
 		answer:
-			"Our AI analyzes the information you provide about the recipient such as age, interests, relationship, and occasion and matches it against a vast database of gift ideas. By considering personality traits, current trends, and your budget, it delivers thoughtful and personalized gift suggestions every time.",
+			"Yes. You can generate 5 personalized gift recommendations without paying or creating an account. Premium options may expand the experience later, but the free flow is meant to be genuinely useful on its own.",
 	},
 	{
-		id: "how-much-does-it-cost",
-		question: "How much does it cost?",
+		id: "how-does-gifteasy-work",
+		question: "How does it know what to recommend?",
 		answer:
-			"Each batch of 5 personalized gift ideas costs just $2.49. You only pay when you’re ready to see your curated recommendations. No hidden fees or subscriptions.",
+			"You describe the person, the occasion, and your budget. GiftEasy uses that context to generate ideas tailored to one specific person instead of serving another generic list meant for everyone.",
 	},
 	{
-		id: "need-account",
+		id: "need-an-account",
 		question: "Do I need to create an account?",
 		answer:
-			"No signup or account creation is required, just answer a few quick questions and instantly receive your gift ideas. Enjoy a seamless experience with complete privacy.",
+			"No. The landing page sends you straight into the app, and the free gift flow works without signup. That keeps the first run fast when you are already short on time.",
 	},
 	{
-		id: "occasions-supported",
-		question: "What occasions does GiftEasy support?",
+		id: "dont-like-the-ideas",
+		question: "What if I do not like the suggestions?",
 		answer:
-			"GiftEasy helps with a wide range of occasions, including birthdays, anniversaries, holidays, graduations, corporate gifts, and more. No matter the event, we’ll find the perfect present.",
+			"Give the app a little more context and run it again. Stronger details about their hobbies, style, or habits usually produce sharper recommendations than broad descriptions.",
 	},
 	{
-		id: "budget-range",
-		question: "Can I specify a budget range?",
+		id: "share-the-list",
+		question: "Can I share my gift list with someone else?",
 		answer:
-			"Absolutely! GiftEasy allows you to set specific budget parameters, ensuring all recommendations fall within your price range. Whether you’re seeking affordable ideas or premium gifts, our AI tailors suggestions to your spending comfort.",
+			"Yes. The app supports shareable result links so you can send ideas to a sibling, partner, or anyone helping with the purchase decision.",
 	},
 	{
-		id: "accuracy",
-		question: "How accurate are the gift suggestions?",
+		id: "what-occasions",
+		question: "What occasions does GiftEasy cover?",
 		answer:
-			"Our AI is trained to provide thoughtful, relevant ideas based on your input and current trends. If you want more options or aren’t fully satisfied, you can always request another batch of suggestions.",
+			"Birthdays, anniversaries, graduations, holidays, housewarmings, retirements, and more. The landing page highlights common starting points, but the app already covers a much wider occasion set.",
 	},
 	{
-		id: "business-gifts",
-		question: "Can I use GiftEasy for business gifts?",
+		id: "is-data-safe",
+		question: "Is my data safe?",
 		answer:
-			"Yes! GiftEasy offers a dedicated business gifting feature for corporate presents, client appreciation, employee recognition, and team celebrations. Make professional gifting effortless and thoughtful.",
+			"The flow keeps the input lightweight and focused on gift context rather than sensitive personal data. You are describing a person for recommendation quality, not building a permanent profile.",
 	},
 	{
-		id: "dont-like-suggestions",
-		question: "What if I don't like any of the suggestions?",
+		id: "why-not-google",
+		question: "How is this different from searching gift ideas on Google?",
 		answer:
-			"If you’re not satisfied with the initial suggestions, you can refine your search by providing more details or adjusting your preferences. Simply request a new batch, our AI learns from your feedback to improve future recommendations.",
+			"Search results give you listicles for the average person. GiftEasy gives you 5 ideas for your person, with reasoning, price guidance, and direct next steps to buy.",
 	},
 ];
