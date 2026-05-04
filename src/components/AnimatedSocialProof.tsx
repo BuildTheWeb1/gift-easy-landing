@@ -33,7 +33,12 @@ export default function AnimatedSocialProof({
 
 	return (
 		<div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-			<div>
+			<motion.div
+				initial={shouldReduceMotion ? undefined : { opacity: 0, y: 24 }}
+				whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+				viewport={{ once: false, amount: 0.2 }}
+				transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+			>
 				<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">
 					Social Proof
 				</p>
@@ -45,8 +50,16 @@ export default function AnimatedSocialProof({
 						<motion.div
 							key={stat.label}
 							className="rounded-[1.6rem] border border-white/12 bg-white/6 p-5"
+							initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18 }}
+							whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+							viewport={{ once: false, amount: 0.25 }}
 							whileHover={hoverLift}
-							transition={{ type: "spring", stiffness: 260, damping: 22 }}
+							transition={{
+								type: "spring",
+								stiffness: 260,
+								damping: 22,
+								delay: 0.08,
+							}}
 						>
 							<p className="font-display text-4xl leading-none text-amber-300">
 								{stat.value}
@@ -55,14 +68,22 @@ export default function AnimatedSocialProof({
 						</motion.div>
 					))}
 				</div>
-			</div>
+			</motion.div>
 			<div className="grid gap-4 lg:grid-cols-3">
-				{testimonials.map((testimonial) => (
+				{testimonials.map((testimonial, index) => (
 					<motion.article
 						key={testimonial.name}
 						className="flex h-full flex-col rounded-[1.8rem] border border-white/12 bg-white/6 p-6"
+						initial={shouldReduceMotion ? undefined : { opacity: 0, y: 20, scale: 0.98 }}
+						whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
+						viewport={{ once: false, amount: 0.2 }}
 						whileHover={hoverLift}
-						transition={{ type: "spring", stiffness: 260, damping: 22 }}
+						transition={{
+							type: "spring",
+							stiffness: 260,
+							damping: 22,
+							delay: 0.08 + index * 0.06,
+						}}
 					>
 						<p aria-hidden="true" className="text-sm tracking-[0.2em] text-amber-300">
 							★★★★★

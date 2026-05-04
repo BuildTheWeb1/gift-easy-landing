@@ -13,6 +13,7 @@ import {
 import { faqItems } from "@/app/data/faqData";
 import AnimatedClosingCta from "@/components/AnimatedClosingCta";
 import LandingHeader from "@/components/LandingHeader";
+import MotionReveal from "@/components/MotionReveal";
 import AnimatedSocialProof from "@/components/AnimatedSocialProof";
 import DemoTabs from "@/components/DemoTabs";
 import {
@@ -222,69 +223,73 @@ export default function LandingPage() {
 				</section>
 				<section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
 					<div className="mx-auto max-w-6xl rounded-[2.5rem] border border-white/65 bg-white/72 p-8 shadow-[0_20px_70px_rgba(28,25,23,0.08)] sm:p-10 lg:p-14">
-						<div className="max-w-2xl">
+						<MotionReveal className="max-w-2xl">
 							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
 								How It Works
 							</p>
 							<h2 className="mt-4 text-balance font-display text-[clamp(2.15rem,3.8vw,3.25rem)] leading-[1.02] tracking-[-0.03em]">
 								Short form in. Strong gift ideas out.
 							</h2>
-						</div>
+						</MotionReveal>
 						<div className="mt-10 grid gap-5 lg:grid-cols-3">
-							{howItWorksSteps.map((step) => (
-								<article
-									key={step.id}
-									className="rounded-[1.8rem] border border-stone-200 bg-stone-50 p-6"
-								>
-									<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
-										{step.id}
-									</p>
-									<h3 className="mt-4 font-display text-3xl leading-tight text-stone-950">
-										{step.title}
-									</h3>
-									<p className="mt-3 text-pretty leading-7 text-stone-700">
-										{step.description}
-									</p>
-									<p className="mt-5 text-sm font-semibold text-stone-500">{step.meta}</p>
-								</article>
+							{howItWorksSteps.map((step, index) => (
+								<MotionReveal key={step.id} delay={index * 0.08}>
+									<article className="rounded-[1.8rem] border border-stone-200 bg-stone-50 p-6">
+										<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
+											{step.id}
+										</p>
+										<h3 className="mt-4 font-display text-3xl leading-tight text-stone-950">
+											{step.title}
+										</h3>
+										<p className="mt-3 text-pretty leading-7 text-stone-700">
+											{step.description}
+										</p>
+										<p className="mt-5 text-sm font-semibold text-stone-500">
+											{step.meta}
+										</p>
+									</article>
+								</MotionReveal>
 							))}
 						</div>
 					</div>
 				</section>
 				<section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
 					<div className="mx-auto max-w-6xl">
-						<div className="max-w-3xl">
+						<MotionReveal className="max-w-3xl">
 							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
 								We&rsquo;ve All Been There
 							</p>
 							<h2 className="mt-4 text-balance font-display text-[clamp(2.2rem,3.9vw,3.35rem)] leading-[1.02] tracking-[-0.03em]">
 								GiftEasy was built for the awkward, last-minute, impossible cases.
 							</h2>
-						</div>
+						</MotionReveal>
 						<div className="mt-10 grid gap-4 md:grid-cols-2">
-							{painPoints.map((point) => (
-								<article
-									key={point}
-									className="rounded-[1.8rem] border border-stone-200 bg-white/80 p-6 shadow-sm"
-								>
-									<p className="text-lg leading-8 text-stone-800">&ldquo;{point}&rdquo;</p>
-								</article>
+							{painPoints.map((point, index) => (
+								<MotionReveal key={point} delay={index * 0.06}>
+									<article className="rounded-[1.8rem] border border-stone-200 bg-white/80 p-6 shadow-sm">
+										<p className="text-lg leading-8 text-stone-800">
+											&ldquo;{point}&rdquo;
+										</p>
+									</article>
+								</MotionReveal>
 							))}
 						</div>
-						<p className="mt-8 max-w-3xl text-pretty text-lg leading-8 text-stone-700">
-							These are the exact moments the app is designed for. You bring the
-							personality and context. GiftEasy turns that into ideas that make them ask
-							how you knew.
-						</p>
-						<div className="mt-8">
-							<Button
-								asChild
-								size="lg"
-								className="h-14 rounded-full bg-stone-950 px-7 text-base font-semibold text-stone-50 hover:bg-stone-800"
-							>
-								<Link href={primaryCtaHref}>Try It Free</Link>
-							</Button>
-						</div>
+						<MotionReveal className="mt-8 max-w-3xl" delay={0.12}>
+							<p className="text-pretty text-lg leading-8 text-stone-700">
+								These are the exact moments the app is designed for. You bring the
+								personality and context. GiftEasy turns that into ideas that make them ask
+								how you knew.
+							</p>
+							<div className="mt-8">
+								<Button
+									asChild
+									size="lg"
+									className="h-14 rounded-full bg-stone-950 px-7 text-base font-semibold text-stone-50 hover:bg-stone-800"
+								>
+									<Link href={primaryCtaHref}>Try It Free</Link>
+								</Button>
+							</div>
+						</MotionReveal>
 					</div>
 				</section>
 				<section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
@@ -297,31 +302,35 @@ export default function LandingPage() {
 				</section>
 				<section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
 					<div className="mx-auto max-w-6xl">
-						<div className="max-w-3xl">
+						<MotionReveal className="max-w-3xl">
 							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
 								Occasions
 							</p>
 							<h2 className="mt-4 text-balance font-display text-[clamp(2.05rem,3.6vw,3rem)] leading-[1.03] tracking-[-0.03em]">
 								Gift ideas for every moment that matters.
 							</h2>
-						</div>
+						</MotionReveal>
 						<div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-							{occasionLinks.map((item) => (
-								<Link
+							{occasionLinks.map((item, index) => (
+								<MotionReveal
 									key={`${item.label}-${item.href}`}
-									href={item.href}
-									className="group block rounded-[1.7rem] border border-stone-200 bg-white/82 p-5 transition-[transform,background-color,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-stone-400 hover:bg-white hover:shadow-[0_16px_32px_rgba(28,25,23,0.08)] focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
+									delay={index * 0.06}
 								>
-									<p className="font-display text-2xl leading-tight text-stone-950">
-										{item.label}
-									</p>
-									<p className="mt-3 text-sm leading-6 text-stone-600">
-										{item.description}
-									</p>
-									<span className="mt-5 inline-flex h-11 items-center rounded-full border border-stone-300 bg-white px-4 text-sm font-semibold text-stone-950 transition-colors duration-200 group-hover:border-stone-500">
-										Open the form &rarr;
-									</span>
-								</Link>
+									<Link
+										href={item.href}
+										className="group block rounded-[1.7rem] border border-stone-200 bg-white/82 p-5 transition-[transform,background-color,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-stone-400 hover:bg-white hover:shadow-[0_16px_32px_rgba(28,25,23,0.08)] focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
+									>
+										<p className="font-display text-2xl leading-tight text-stone-950">
+											{item.label}
+										</p>
+										<p className="mt-3 text-sm leading-6 text-stone-600">
+											{item.description}
+										</p>
+										<span className="mt-5 inline-flex h-11 items-center rounded-full border border-stone-300 bg-white px-4 text-sm font-semibold text-stone-950 transition-colors duration-200 group-hover:border-stone-500">
+											Open the form &rarr;
+										</span>
+									</Link>
+								</MotionReveal>
 							))}
 						</div>
 					</div>
