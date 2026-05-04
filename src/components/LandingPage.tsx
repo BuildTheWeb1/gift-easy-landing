@@ -11,6 +11,8 @@ import {
 	trustBarItems,
 } from "@/app/data/landingPageData";
 import { faqItems } from "@/app/data/faqData";
+import AnimatedClosingCta from "@/components/AnimatedClosingCta";
+import AnimatedSocialProof from "@/components/AnimatedSocialProof";
 import DemoTabs from "@/components/DemoTabs";
 import {
 	Accordion,
@@ -315,49 +317,10 @@ export default function LandingPage() {
 				</section>
 				<section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
 					<div className="mx-auto max-w-6xl rounded-[2.5rem] border border-stone-200 bg-stone-950 px-6 py-10 text-stone-50 shadow-[0_30px_80px_rgba(28,25,23,0.16)] sm:px-8 lg:px-12">
-						<div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-							<div>
-								<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">
-									Social Proof
-								</p>
-								<h2 className="mt-4 text-balance font-display text-[clamp(2.15rem,3.8vw,3.2rem)] leading-[1.02] tracking-[-0.03em]">
-									People are finding better gifts, faster.
-								</h2>
-								<div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-									{proofStats.map((stat) => (
-										<div
-											key={stat.label}
-											className="rounded-[1.6rem] border border-white/12 bg-white/6 p-5"
-										>
-											<p className="font-display text-4xl leading-none text-amber-300">
-												{stat.value}
-											</p>
-											<p className="mt-3 text-sm leading-6 text-stone-300">{stat.label}</p>
-										</div>
-									))}
-								</div>
-							</div>
-							<div className="grid gap-4 lg:grid-cols-3">
-								{testimonials.map((testimonial) => (
-									<article
-										key={testimonial.name}
-										className="flex h-full flex-col rounded-[1.8rem] border border-white/12 bg-white/6 p-6"
-									>
-										<p aria-hidden="true" className="text-sm tracking-[0.2em] text-amber-300">
-											★★★★★
-										</p>
-										<p className="sr-only">Five-star feedback</p>
-										<p className="flex-1 text-pretty leading-7 text-stone-100">
-											&ldquo;{testimonial.quote}&rdquo;
-										</p>
-										<p className="mt-6 text-sm font-semibold text-stone-50">
-											{testimonial.name}
-										</p>
-										<p className="mt-1 text-sm text-stone-400">{testimonial.source}</p>
-									</article>
-								))}
-							</div>
-						</div>
+						<AnimatedSocialProof
+							proofStats={proofStats}
+							testimonials={testimonials}
+						/>
 					</div>
 				</section>
 				<section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
@@ -375,7 +338,7 @@ export default function LandingPage() {
 								<Link
 									key={`${item.label}-${item.href}`}
 									href={item.href}
-									className="group rounded-[1.7rem] border border-stone-200 bg-white/82 p-5 transition-[transform,background-color,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-stone-400 hover:bg-white hover:shadow-[0_16px_32px_rgba(28,25,23,0.08)] focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
+									className="group block rounded-[1.7rem] border border-stone-200 bg-white/82 p-5 transition-[transform,background-color,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-stone-400 hover:bg-white hover:shadow-[0_16px_32px_rgba(28,25,23,0.08)] focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
 								>
 									<p className="font-display text-2xl leading-tight text-stone-950">
 										{item.label}
@@ -425,28 +388,8 @@ export default function LandingPage() {
 					</div>
 				</section>
 				<section className="px-4 pb-16 pt-14 sm:px-6 lg:px-8 lg:pb-24 lg:pt-24">
-					<div className="mx-auto max-w-5xl rounded-[2.8rem] border border-amber-300/50 bg-[linear-gradient(135deg,rgba(251,191,36,0.26),rgba(255,255,255,0.92),rgba(245,158,11,0.18))] px-6 py-12 text-center shadow-[0_30px_80px_rgba(28,25,23,0.09)] sm:px-10">
-						<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
-							Ready When You Are
-						</p>
-						<h2 className="mx-auto mt-4 max-w-3xl text-balance font-display text-[clamp(2.2rem,3.8vw,3.4rem)] leading-[1.02] tracking-[-0.03em]">
-							Your person deserves a gift that means something.
-						</h2>
-						<p className="mx-auto mt-4 max-w-2xl text-pretty text-lg leading-8 text-stone-700">
-							30 seconds. 5 ideas. Zero stress.
-						</p>
-						<div className="mt-8">
-							<Button
-								asChild
-								size="lg"
-								className="h-14 rounded-full bg-stone-950 px-7 text-base font-semibold text-stone-50 hover:bg-stone-800"
-							>
-								<Link href={primaryCtaHref}>Find Gift Ideas</Link>
-							</Button>
-						</div>
-						<p className="mt-4 text-sm text-stone-600">
-							Free to try · No signup · Takes about 30 seconds
-						</p>
+					<div className="mx-auto max-w-5xl">
+						<AnimatedClosingCta href={primaryCtaHref} />
 					</div>
 				</section>
 			</main>

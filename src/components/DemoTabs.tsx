@@ -3,6 +3,7 @@
 import type { DemoScenario } from "@/app/data/landingPageData";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { startTransition, useEffect, useRef, useState } from "react";
@@ -13,6 +14,7 @@ type DemoTabsProps = {
 
 export default function DemoTabs({ scenarios }: DemoTabsProps) {
 	const searchParams = useSearchParams();
+	const shouldReduceMotion = useReducedMotion();
 	const fallbackId = scenarios[0]?.id ?? "";
 	const initialId = searchParams.get("example") ?? fallbackId;
 	const [activeId, setActiveId] = useState(initialId);
@@ -126,13 +128,22 @@ export default function DemoTabs({ scenarios }: DemoTabsProps) {
 				<div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[#f4efe6] via-[#f4efe6]/88 to-transparent" />
 			</div>
 
-			<div
+			<motion.div
+				key={activeScenario.id}
 				id={`panel-${activeScenario.id}`}
 				role="tabpanel"
 				aria-labelledby={`tab-${activeScenario.id}`}
 				className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]"
+				initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18 }}
+				animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+				transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
 			>
-				<div className="rounded-[2rem] border border-stone-200 bg-stone-950 p-6 text-stone-50 shadow-[0_24px_60px_rgba(28,25,23,0.12)]">
+				<motion.div
+					className="rounded-[2rem] border border-stone-200 bg-stone-950 p-6 text-stone-50 shadow-[0_24px_60px_rgba(28,25,23,0.12)]"
+					initial={shouldReduceMotion ? undefined : { opacity: 0, x: -18 }}
+					animate={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
+					transition={{ duration: 0.4, delay: 0.04, ease: [0.22, 1, 0.36, 1] }}
+				>
 					<p className="text-xs font-semibold uppercase tracking-[0.24em] text-amber-300">
 						Input Summary
 					</p>
@@ -150,14 +161,26 @@ export default function DemoTabs({ scenarios }: DemoTabsProps) {
 							{activeScenario.budget}
 						</span>
 					</div>
-				</div>
+				</motion.div>
 
-				<div className="min-w-0 overflow-hidden rounded-[2rem] border border-stone-200 bg-white/92 p-4 shadow-[0_24px_60px_rgba(28,25,23,0.08)] sm:p-6">
+				<motion.div
+					className="min-w-0 overflow-hidden rounded-[2rem] border border-stone-200 bg-white/92 p-4 shadow-[0_24px_60px_rgba(28,25,23,0.08)] sm:p-6"
+					initial={shouldReduceMotion ? undefined : { opacity: 0, x: 18 }}
+					animate={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
+					transition={{ duration: 0.4, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+				>
 					<div className="space-y-4">
-						{activeScenario.results.map((result) => (
-							<article
+						{activeScenario.results.map((result, index) => (
+							<motion.article
 								key={result.title}
 								className="w-full min-w-0 rounded-[1.5rem] border border-stone-200 bg-stone-50 p-5"
+								initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18, scale: 0.98 }}
+								animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
+								transition={{
+									duration: 0.32,
+									delay: 0.1 + index * 0.07,
+									ease: [0.22, 1, 0.36, 1],
+								}}
 							>
 								<p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
 									Thoughtful Match
@@ -178,15 +201,15 @@ export default function DemoTabs({ scenarios }: DemoTabsProps) {
 										<Link href={result.href}>Try this scenario</Link>
 									</Button>
 								</div>
-							</article>
+							</motion.article>
 						))}
 					</div>
 
 					<p className="mt-5 text-sm font-medium text-stone-600">
 						Plus 3 more ideas when you run it for your person.
 					</p>
-				</div>
-			</div>
+				</motion.div>
+			</motion.div>
 		</div>
 	);
 }
