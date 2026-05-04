@@ -12,6 +12,7 @@ import {
 } from "@/app/data/landingPageData";
 import { faqItems } from "@/app/data/faqData";
 import AnimatedClosingCta from "@/components/AnimatedClosingCta";
+import LandingHeader from "@/components/LandingHeader";
 import AnimatedSocialProof from "@/components/AnimatedSocialProof";
 import DemoTabs from "@/components/DemoTabs";
 import {
@@ -21,7 +22,6 @@ import {
 	AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 
@@ -100,35 +100,7 @@ export default function LandingPage() {
 			>
 				Skip to content
 			</a>
-			<header className="sticky top-0 z-40 border-b border-white/55 bg-[#faf6ef]/80 backdrop-blur-xl">
-				<div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:gap-4 sm:px-6 lg:px-8">
-					<Link
-						href="/"
-						className="min-w-0 flex items-center gap-3 rounded-full focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
-					>
-						<Image
-							src="/GiftEasy-logo.svg"
-							alt="GiftEasy logo"
-							width={42}
-							height={42}
-							priority
-						/>
-						<span className="hidden font-display text-2xl tracking-tight sm:inline">
-							GiftEasy
-						</span>
-					</Link>
-					<Button
-						asChild
-						size="lg"
-						className="h-11 rounded-full bg-stone-950 px-3 text-sm font-semibold text-stone-50 shadow-[0_18px_30px_rgba(28,25,23,0.16)] hover:bg-stone-800 sm:h-12 sm:px-5"
-					>
-						<Link href={primaryCtaHref}>
-							<span className="sm:hidden">Find Gifts</span>
-							<span className="hidden sm:inline">Find Gift Ideas</span>
-						</Link>
-					</Button>
-				</div>
-			</header>
+			<LandingHeader primaryCtaHref={primaryCtaHref} />
 			<main id="main-content">
 				<section className="px-4 pb-14 pt-10 sm:px-6 lg:px-8 lg:pb-24 lg:pt-16">
 					<div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
@@ -398,22 +370,25 @@ export default function LandingPage() {
 					<div>
 						<p className="font-display text-2xl">GiftEasy</p>
 						<p className="mt-2 text-sm text-stone-600">
-							Made for better gift-giving, not more guesswork.
+							2025 - {new Date().getFullYear()} &copy; GiftEasy | Made for better gift-giving, not more guesswork.
 						</p>
 						<div className="mt-4 flex flex-wrap gap-3 text-sm text-stone-600">
 							<Link
+								target="_blank"
 								href="https://www.producthunt.com/products/gift-easy"
 								className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 transition-colors duration-200 hover:text-stone-950 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
 							>
 								Product Hunt
 							</Link>
 							<Link
+								target="_blank"
 								href="https://trustmrr.com/startup/gifteasy"
 								className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 transition-colors duration-200 hover:text-stone-950 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
 							>
 								TrustMRR
 							</Link>
 							<Link
+								target="_blank"
 								href="https://x.com/buildtheweb1"
 								className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 transition-colors duration-200 hover:text-stone-950 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
 							>

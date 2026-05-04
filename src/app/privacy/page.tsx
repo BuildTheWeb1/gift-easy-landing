@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { BackArrowLink } from "@/components/BackArrowLink";
+
 export const metadata: Metadata = {
 	title: "Privacy Policy | GiftEasy",
 	description: "Privacy information for the GiftEasy landing page and app.",
@@ -9,6 +11,7 @@ export default function PrivacyPage() {
 	return (
 		<main className="min-h-screen bg-[linear-gradient(180deg,#faf6ef_0%,#f4efe6_100%)] px-4 py-16 text-stone-950 sm:px-6 lg:px-8">
 			<div className="mx-auto max-w-3xl rounded-[2rem] border border-stone-200 bg-white/88 p-8 shadow-[0_20px_50px_rgba(28,25,23,0.08)] sm:p-10">
+				<BackArrowLink />
 				<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
 					Privacy Policy
 				</p>
