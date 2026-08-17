@@ -9,48 +9,48 @@ export const faqItems: FAQItem[] = [
 		id: "is-gifteasy-free",
 		question: "Is GiftEasy really free?",
 		answer:
-			"Your first recommendation is completely free, no account required. After that, GiftEasy runs on credits: buy a small pack whenever you need more (starting at $4.99 for 5 credits), and credits never expire.",
+			"Your first search is completely free, no account needed. After that, generating a new list of ideas uses credits — 1 credit per recommendation, so you're never charged for more than you get. New accounts also get 3 free credits to try it out.",
 	},
 	{
 		id: "how-does-gifteasy-work",
 		question: "How does it know what to recommend?",
 		answer:
-			"You describe the person, the occasion, and your budget. GiftEasy uses that context to generate ideas tailored to one specific person instead of serving another generic list meant for everyone.",
+			"Tell us who the gift is for, the occasion, their age range, and a bit about them — their interests, relationship to you, budget — and our AI searches the web in real time to find real, currently-available products that actually fit, instead of generic suggestions.",
 	},
 	{
 		id: "need-an-account",
 		question: "Do I need to create an account?",
 		answer:
-			"No. The landing page sends you straight into the app, and your first recommendation works without signup. That keeps the first run fast when you are already short on time.",
+			"No — your first gift list works instantly with no sign-up. You'll only need an account if you want to buy more credits, save your search history, or come back to a list later.",
 	},
 	{
 		id: "dont-like-the-ideas",
-		question: "What if I do not like the suggestions?",
+		question: "What if I don't like the suggestions?",
 		answer:
-			"Give the app a little more context and run it again. Stronger details about their hobbies, style, or habits usually produce sharper recommendations than broad descriptions.",
+			"You can vote thumbs up or down on any recommendation to help us learn your taste, or just start a new search with different details — a different budget, occasion, or a bit more context about them usually turns up better matches.",
 	},
 	{
 		id: "share-the-list",
 		question: "Can I share my gift list with someone else?",
 		answer:
-			"Yes. The app supports shareable result links so you can send ideas to a sibling, partner, or anyone helping with the purchase decision.",
+			'Yes — every list gets a shareable link. Hit "Share" (or "Copy link") on your results page and send it to anyone; they don\'t need an account to view it.',
 	},
 	{
 		id: "what-occasions",
 		question: "What occasions does GiftEasy cover?",
 		answer:
-			"Birthdays, anniversaries, graduations, holidays, housewarmings, retirements, and more. The landing page highlights common starting points, but the app already covers a much wider occasion set.",
+			"Dozens, from birthdays, holidays, and weddings to more specific milestones like graduations, promotions, and new pets — organized into categories like Personal Achievements, Cultural & Religious Events, and Relationship Milestones so you can find the right occasion fast.",
 	},
 	{
 		id: "is-data-safe",
 		question: "Is my data safe?",
 		answer:
-			"The flow keeps the input lightweight and focused on gift context rather than sensitive personal data. You are describing a person for recommendation quality, not building a permanent profile.",
+			"Yes. We never see or store your payment details — purchases go through Stripe. Your gift lists are private by default and only visible to you, unless you choose to share the link.",
 	},
 	{
 		id: "why-not-google",
 		question: "How is this different from searching gift ideas on Google?",
 		answer:
-			"Search results give you listicles for the average person. GiftEasy gives you 5 ideas for your person, with reasoning, price guidance, and direct next steps to buy.",
+			"Google gives you a list of articles to read through yourself. GiftEasy does the research for you — it searches the web live and returns specific, in-stock products tailored to the actual person you're shopping for, not a generic \"best gifts for X\" listicle.",
 	},
 ];
