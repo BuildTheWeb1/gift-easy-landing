@@ -28,7 +28,7 @@ export type OccasionLink = {
 export const primaryCtaHref = "https://app.gift-easy.com/";
 
 export const trustBarItems = [
-	"Free to try",
+	"1 free recommendation",
 	"No signup needed",
 	"Takes about 30 seconds",
 ];
@@ -161,7 +161,7 @@ export const proofStats = [
 	},
 	{
 		value: "5",
-		label: "personalized ideas in every free result",
+		label: "personalized ideas in every recommendation",
 	},
 	{
 		value: "1",

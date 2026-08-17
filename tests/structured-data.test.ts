@@ -18,13 +18,13 @@ test("FAQ schema stays aligned with faqItems", () => {
 	);
 });
 
-test("web application schema keeps the free-flow positioning", () => {
+test("web application schema keeps the free-first-recommendation positioning", () => {
 	const schema = buildWebApplicationSchema();
 
 	assert.equal(schema["@type"], "WebApplication");
 	assert.equal(schema.offers.price, "0");
 	assert.ok(
-		schema.featureList.includes("No signup required for the free flow"),
+		schema.featureList.includes("First recommendation free, no signup required"),
 	);
 });
 

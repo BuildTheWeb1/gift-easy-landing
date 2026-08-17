@@ -44,7 +44,7 @@ export function buildWebApplicationSchema() {
 			"5 personalized gift ideas",
 			"Price guidance included",
 			"Direct purchase links",
-			"No signup required for the free flow",
+			"First recommendation free, no signup required",
 		],
 	};
 }

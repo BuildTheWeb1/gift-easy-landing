@@ -9,7 +9,7 @@ export const faqItems: FAQItem[] = [
 		id: "is-gifteasy-free",
 		question: "Is GiftEasy really free?",
 		answer:
-			"Yes. You can generate 5 personalized gift recommendations without paying or creating an account. Premium options may expand the experience later, but the free flow is meant to be genuinely useful on its own.",
+			"Your first recommendation is completely free, no account required. After that, GiftEasy runs on credits: buy a small pack whenever you need more (starting at $4.99 for 5 credits), and credits never expire.",
 	},
 	{
 		id: "how-does-gifteasy-work",
@@ -21,7 +21,7 @@ export const faqItems: FAQItem[] = [
 		id: "need-an-account",
 		question: "Do I need to create an account?",
 		answer:
-			"No. The landing page sends you straight into the app, and the free gift flow works without signup. That keeps the first run fast when you are already short on time.",
+			"No. The landing page sends you straight into the app, and your first recommendation works without signup. That keeps the first run fast when you are already short on time.",
 	},
 	{
 		id: "dont-like-the-ideas",

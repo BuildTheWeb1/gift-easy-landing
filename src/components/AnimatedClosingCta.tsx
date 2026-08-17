@@ -48,7 +48,7 @@ export default function AnimatedClosingCta({ href }: AnimatedClosingCtaProps) {
 					</motion.div>
 				</div>
 				<p className="mt-4 text-sm font-medium text-stone-700">
-					Free to try <span className="text-amber-800">&middot;</span> No signup{" "}
+					1 free recommendation <span className="text-amber-800">&middot;</span> No signup{" "}
 					<span className="text-amber-800">&middot;</span> Takes about 30 seconds
 				</p>
 			</div>

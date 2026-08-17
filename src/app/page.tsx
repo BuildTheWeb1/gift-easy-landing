@@ -3,9 +3,9 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "GiftEasy - Personalized Gift Ideas in 30 Seconds | Free AI Gift Finder",
+	title: "GiftEasy - Personalized Gift Ideas in 30 Seconds | AI Gift Finder",
 	description:
-		"Tell us about your person and get 5 thoughtful, personalized gift recommendations with prices and purchase links. Free, no signup needed.",
+		"Tell us about your person and get 5 thoughtful, personalized gift ideas with prices and purchase links. Your first recommendation is free — no signup needed.",
 	keywords: [
 		"gift ideas",
 		"gift finder",
