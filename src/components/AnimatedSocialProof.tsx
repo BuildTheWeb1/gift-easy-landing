@@ -34,10 +34,10 @@ export default function AnimatedSocialProof({
 	return (
 		<div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
 			<motion.div
-				initial={shouldReduceMotion ? undefined : { opacity: 0, y: 24 }}
+				initial={shouldReduceMotion ? undefined : { opacity: 0.4, y: 24 }}
 				whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
-				viewport={{ once: false, amount: 0.2 }}
-				transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+				viewport={{ once: true, amount: 0.2 }}
+				transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
 			>
 				<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">
 					Social Proof
@@ -45,14 +45,18 @@ export default function AnimatedSocialProof({
 				<h2 className="mt-4 text-balance font-display text-[clamp(2.15rem,3.8vw,3.2rem)] leading-[1.02] tracking-[-0.03em]">
 					People are finding better gifts, faster.
 				</h2>
-				<div className="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-					{proofStats.map((stat) => (
+				<div className="mt-8 grid gap-6 divide-y divide-white/12 sm:grid-cols-3 sm:gap-4 sm:divide-y-0 lg:grid-cols-1 lg:divide-y">
+					{proofStats.map((stat, index) => (
 						<motion.div
 							key={stat.label}
-							className="rounded-[1.6rem] border border-white/12 bg-white/6 p-5"
-							initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18 }}
+							className={
+								index === 0
+									? "pt-0 sm:pt-0 lg:pt-0"
+									: "pt-6 sm:pt-0 lg:pt-6"
+							}
+							initial={shouldReduceMotion ? undefined : { opacity: 0.4, y: 18 }}
 							whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
-							viewport={{ once: false, amount: 0.25 }}
+							viewport={{ once: true, amount: 0.25 }}
 							whileHover={hoverLift}
 							transition={{
 								type: "spring",
@@ -69,14 +73,18 @@ export default function AnimatedSocialProof({
 					))}
 				</div>
 			</motion.div>
-			<div className="grid gap-4 lg:grid-cols-3">
+			<div className="grid gap-8 divide-y divide-white/12 lg:grid-cols-3 lg:gap-6 lg:divide-x lg:divide-y-0">
 				{testimonials.map((testimonial, index) => (
 					<motion.article
 						key={testimonial.name}
-						className="flex h-full flex-col rounded-[1.8rem] border border-white/12 bg-white/6 p-6"
-						initial={shouldReduceMotion ? undefined : { opacity: 0, y: 20, scale: 0.98 }}
+						className={
+							index === 0
+								? "flex h-full flex-col pt-0 lg:pl-0"
+								: "flex h-full flex-col pt-8 lg:pl-6 lg:pt-0"
+						}
+						initial={shouldReduceMotion ? undefined : { opacity: 0.4, y: 20, scale: 0.98 }}
 						whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
-						viewport={{ once: false, amount: 0.2 }}
+						viewport={{ once: true, amount: 0.2 }}
 						whileHover={hoverLift}
 						transition={{
 							type: "spring",

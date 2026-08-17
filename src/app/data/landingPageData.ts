@@ -22,6 +22,7 @@ export type OccasionLink = {
 	relationship?: string;
 	description: string;
 	href: string;
+	popular?: boolean;
 };
 
 export const primaryCtaHref = "https://app.gift-easy.com/";
@@ -195,18 +196,21 @@ export const occasionLinks: OccasionLink[] = [
 		occasion: "Birthday",
 		description: "For the person who says they do not need anything and still deserves something thoughtful.",
 		href: "https://app.gift-easy.com/?occasion=Birthday",
+		popular: true,
 	},
 	{
 		label: "Anniversary",
 		occasion: "Anniversary",
 		description: "Find something that feels personal, not like a rushed backup plan.",
 		href: "https://app.gift-easy.com/?occasion=Anniversary",
+		popular: true,
 	},
 	{
 		label: "Christmas",
 		occasion: "Christmas",
 		description: "Cut through wish-list noise and land on a gift they will actually use.",
 		href: "https://app.gift-easy.com/?occasion=Christmas",
+		popular: true,
 	},
 	{
 		label: "Graduation",
@@ -251,6 +255,7 @@ export const occasionLinks: OccasionLink[] = [
 		relationship: "Partner",
 		description: "Find a romantic gift that feels specific to your person, not copy-pasted.",
 		href: "https://app.gift-easy.com/?occasion=Valentine%27s%20Day&relationship=Partner",
+		popular: true,
 	},
 	{
 		label: "Father's Day",

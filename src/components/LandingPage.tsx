@@ -15,7 +15,9 @@ import AnimatedClosingCta from "@/components/AnimatedClosingCta";
 import LandingHeader from "@/components/LandingHeader";
 import MotionReveal from "@/components/MotionReveal";
 import AnimatedSocialProof from "@/components/AnimatedSocialProof";
+import PainPointsResolve from "@/components/PainPointsResolve";
 import DemoTabs from "@/components/DemoTabs";
+import OccasionsGrid from "@/components/OccasionsGrid";
 import {
 	Accordion,
 	AccordionContent,
@@ -53,36 +55,46 @@ function DemoTabsFallback() {
 				<div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-[#f4efe6] via-[#f4efe6]/88 to-transparent" />
 			</div>
 			<div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
-				<div className="rounded-[2rem] border border-stone-200 bg-stone-950 p-6 text-stone-50 shadow-[0_24px_60px_rgba(28,25,23,0.12)]">
-					<p className="text-xs font-semibold uppercase tracking-[0.24em] text-amber-300">
-						Input Summary
-					</p>
-					<p className="mt-4 text-pretty text-lg leading-8 text-stone-100">
-						&ldquo;{fallbackScenario.input}&rdquo;
-					</p>
+				<div className="flex h-full flex-col justify-between rounded-[2rem] border border-stone-200 bg-stone-950 p-6 text-stone-50 shadow-[0_24px_60px_rgba(28,25,23,0.12)]">
+					<div>
+						<p className="text-xs font-semibold uppercase tracking-[0.24em] text-amber-300">
+							Input Summary
+						</p>
+						<p className="mt-4 text-pretty text-lg leading-8 text-stone-100">
+							&ldquo;{fallbackScenario.input}&rdquo;
+						</p>
+					</div>
+					<div className="mt-8 flex flex-wrap gap-3 text-sm text-stone-300">
+						<span className="rounded-full border border-white/12 px-3 py-1">
+							{fallbackScenario.occasion}
+						</span>
+						<span className="rounded-full border border-white/12 px-3 py-1">
+							{fallbackScenario.relationship}
+						</span>
+						<span className="rounded-full border border-white/12 px-3 py-1">
+							{fallbackScenario.budget}
+						</span>
+					</div>
 				</div>
 				<div className="min-w-0 overflow-hidden rounded-[2rem] border border-stone-200 bg-white/92 p-4 shadow-[0_24px_60px_rgba(28,25,23,0.08)] sm:p-6">
-					<div className="space-y-4">
+					<div className="divide-y divide-stone-200">
 						{fallbackScenario.results.map((result) => (
-							<article
-								key={result.title}
-								className="w-full min-w-0 rounded-[1.5rem] border border-stone-200 bg-stone-50 p-5"
-							>
-								<p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
+							<article key={result.title} className="w-full min-w-0 py-5 first:pt-0 last:pb-0">
+								<p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-800">
 									Thoughtful Match
 								</p>
-								<h3 className="mt-3 font-display text-[1.65rem] leading-tight text-stone-950">
+								<h3 className="mt-3 font-display text-3xl leading-tight text-stone-950">
 									{result.title}
 								</h3>
-									<p className="mt-3 text-pretty leading-7 text-stone-700">
-										{result.hook}
-									</p>
-									<p className="mt-4 text-sm font-semibold text-amber-700">
-										Use this scenario in the app
-									</p>
-								</article>
-							))}
-						</div>
+								<p className="mt-3 text-pretty leading-7 text-stone-700">
+									{result.hook}
+								</p>
+								<p className="mt-4 text-sm font-semibold text-amber-800">
+									Use this scenario in the app
+								</p>
+							</article>
+						))}
+					</div>
 					<p className="mt-5 text-sm font-medium text-stone-600">
 						Plus 3 more ideas when you run it for your person.
 					</p>
@@ -106,7 +118,7 @@ export default function LandingPage() {
 				<section className="px-4 pb-14 pt-10 sm:px-6 lg:px-8 lg:pb-24 lg:pt-16">
 					<div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
 						<div>
-							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
+							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-800">
 								Stop guessing. Start gifting.
 							</p>
 							<h1 className="mt-5 max-w-[12ch] text-balance font-display text-[clamp(2rem,7vw,6.1rem)] leading-[1.05] tracking-[-0.04em]">
@@ -133,13 +145,13 @@ export default function LandingPage() {
 									<Link href="#live-demo">See an Example</Link>
 								</Button>
 							</div>
-							<ul className="mt-8 flex flex-wrap gap-3 text-sm text-stone-700">
+							<ul className="mt-8 flex flex-wrap gap-3 text-sm font-medium text-stone-800">
 								{trustBarItems.map((item) => (
 									<li
 										key={item}
-										className="rounded-full border border-stone-200 bg-white/75 px-4 py-2 shadow-sm"
+										className="rounded-full border border-amber-200/80 bg-amber-50/70 px-4 py-2 shadow-sm"
 									>
-										<span className="font-semibold text-amber-700">+</span> {item}
+										<span className="font-semibold text-amber-800">+</span> {item}
 									</li>
 								))}
 							</ul>
@@ -149,7 +161,7 @@ export default function LandingPage() {
 							<div className="rounded-[2.3rem] border border-white/65 bg-white/84 p-4 shadow-[0_30px_80px_rgba(28,25,23,0.13)] sm:p-6">
 								<div className="rounded-[1.9rem] border border-stone-200 bg-stone-950 p-5 text-stone-50 sm:p-6">
 									<div className="flex items-center justify-between gap-3">
-										<p className="whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.18em] text-amber-300 sm:text-xs sm:tracking-[0.22em]">
+										<p className="whitespace-nowrap text-xs font-semibold uppercase tracking-[0.18em] text-amber-300 sm:tracking-[0.22em]">
 											Product Preview
 										</p>
 										<span className="rounded-full border border-white/10 px-3 py-1 text-xs text-stone-300">
@@ -165,23 +177,19 @@ export default function LandingPage() {
 									</p>
 								</div>
 								<div className="mt-4">
-									<h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-amber-700">
+									<h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-amber-800">
 										What you get
 									</h3>
 								</div>
-								<div className="mt-3 grid gap-3 sm:grid-cols-2">
-									{heroStats.map((item, index) => (
-										<div
+								<div className="mt-3 divide-y divide-stone-200 border-t border-stone-200">
+									{heroStats.map((item) => (
+										<p
 											key={item}
-											className={index === 0 ? "sm:col-span-2" : undefined}
+											className="flex items-center gap-3 py-4 font-display text-lg leading-tight text-stone-900 sm:text-xl"
 										>
-											<div className="rounded-[1.7rem] border border-stone-200 bg-stone-50 p-4 sm:p-5">
-												<p className="flex items-center gap-3 font-display text-lg leading-tight sm:text-[1.35rem]">
-													<span className="inline-block size-2 rounded-full bg-amber-500" />
-													{item}
-												</p>
-											</div>
-										</div>
+											<span className="inline-block size-2 shrink-0 rounded-full bg-amber-500" />
+											{item}
+										</p>
 									))}
 								</div>
 							</div>
@@ -194,7 +202,7 @@ export default function LandingPage() {
 				>
 					<div className="mx-auto max-w-6xl">
 						<div className="max-w-3xl">
-							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
+							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-800">
 								Live Demo
 							</p>
 							<h2 className="mt-4 text-balance font-display text-[clamp(2.25rem,4.8vw,3.7rem)] leading-[1] tracking-[-0.03em]">
@@ -224,18 +232,23 @@ export default function LandingPage() {
 				<section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
 					<div className="mx-auto max-w-6xl rounded-[2.5rem] border border-white/65 bg-white/72 p-8 shadow-[0_20px_70px_rgba(28,25,23,0.08)] sm:p-10 lg:p-14">
 						<MotionReveal className="max-w-2xl">
-							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
+							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-800">
 								How It Works
 							</p>
 							<h2 className="mt-4 text-balance font-display text-[clamp(2.15rem,3.8vw,3.25rem)] leading-[1.02] tracking-[-0.03em]">
 								Short form in. Strong gift ideas out.
 							</h2>
 						</MotionReveal>
-						<div className="mt-10 grid gap-5 lg:grid-cols-3">
+						<div className="mt-10 grid gap-8 divide-y divide-stone-200 lg:grid-cols-3 lg:gap-6 lg:divide-x lg:divide-y-0">
 							{howItWorksSteps.map((step, index) => (
 								<MotionReveal key={step.id} delay={index * 0.08}>
-									<article className="rounded-[1.8rem] border border-stone-200 bg-stone-50 p-6">
-										<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
+									<article
+										className={[
+											index === 0 ? "pt-0 lg:pl-0" : "pt-8 lg:pl-6 lg:pt-0",
+											index === howItWorksSteps.length - 1 ? "pb-0" : "pb-8 lg:pr-6",
+										].join(" ")}
+									>
+										<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-800">
 											{step.id}
 										</p>
 										<h3 className="mt-4 font-display text-3xl leading-tight text-stone-950">
@@ -244,7 +257,7 @@ export default function LandingPage() {
 										<p className="mt-3 text-pretty leading-7 text-stone-700">
 											{step.description}
 										</p>
-										<p className="mt-5 text-sm font-semibold text-stone-500">
+										<p className="mt-5 text-sm font-semibold text-stone-600">
 											{step.meta}
 										</p>
 									</article>
@@ -256,40 +269,19 @@ export default function LandingPage() {
 				<section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
 					<div className="mx-auto max-w-6xl">
 						<MotionReveal className="max-w-3xl">
-							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
+							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-800">
 								We&rsquo;ve All Been There
 							</p>
 							<h2 className="mt-4 text-balance font-display text-[clamp(2.2rem,3.9vw,3.35rem)] leading-[1.02] tracking-[-0.03em]">
 								GiftEasy was built for the awkward, last-minute, impossible cases.
 							</h2>
 						</MotionReveal>
-						<div className="mt-10 grid gap-4 md:grid-cols-2">
-							{painPoints.map((point, index) => (
-								<MotionReveal key={point} delay={index * 0.06}>
-									<article className="rounded-[1.8rem] border border-stone-200 bg-white/80 p-6 shadow-sm">
-										<p className="text-lg leading-8 text-stone-800">
-											&ldquo;{point}&rdquo;
-										</p>
-									</article>
-								</MotionReveal>
-							))}
-						</div>
-						<MotionReveal className="mt-8 max-w-3xl" delay={0.12}>
-							<p className="text-pretty text-lg leading-8 text-stone-700">
-								These are the exact moments the app is designed for. You bring the
-								personality and context. GiftEasy turns that into ideas that make them ask
-								how you knew.
-							</p>
-							<div className="mt-8">
-								<Button
-									asChild
-									size="lg"
-									className="h-14 rounded-full bg-stone-950 px-7 text-base font-semibold text-stone-50 hover:bg-stone-800"
-								>
-									<Link href={primaryCtaHref}>Try It Free</Link>
-								</Button>
-							</div>
-						</MotionReveal>
+						<PainPointsResolve
+							painPoints={painPoints}
+							trustBarItems={trustBarItems}
+							ctaHref={primaryCtaHref}
+							reassurance="These are the exact moments the app is designed for. You bring the personality and context. GiftEasy turns that into ideas that make them ask how you knew."
+						/>
 					</div>
 				</section>
 				<section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
@@ -300,45 +292,26 @@ export default function LandingPage() {
 						/>
 					</div>
 				</section>
-				<section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
+				<section className="px-4 pb-10 pt-14 sm:px-6 lg:px-8 lg:pb-14 lg:pt-24">
 					<div className="mx-auto max-w-6xl">
 						<MotionReveal className="max-w-3xl">
-							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
+							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-800">
 								Occasions
 							</p>
 							<h2 className="mt-4 text-balance font-display text-[clamp(2.05rem,3.6vw,3rem)] leading-[1.03] tracking-[-0.03em]">
 								Gift ideas for every moment that matters.
 							</h2>
+							<p className="mt-4 max-w-xl text-pretty leading-7 text-stone-700">
+								Start with the occasions people search for most, or see the full list.
+							</p>
 						</MotionReveal>
-						<div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-							{occasionLinks.map((item, index) => (
-								<MotionReveal
-									key={`${item.label}-${item.href}`}
-									delay={index * 0.06}
-								>
-									<Link
-										href={item.href}
-										className="group block rounded-[1.7rem] border border-stone-200 bg-white/82 p-5 transition-[transform,background-color,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-stone-400 hover:bg-white hover:shadow-[0_16px_32px_rgba(28,25,23,0.08)] focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
-									>
-										<p className="font-display text-2xl leading-tight text-stone-950">
-											{item.label}
-										</p>
-										<p className="mt-3 text-sm leading-6 text-stone-600">
-											{item.description}
-										</p>
-										<span className="mt-5 inline-flex h-11 items-center rounded-full border border-stone-300 bg-white px-4 text-sm font-semibold text-stone-950 transition-colors duration-200 group-hover:border-stone-500">
-											Open the form &rarr;
-										</span>
-									</Link>
-								</MotionReveal>
-							))}
-						</div>
+						<OccasionsGrid items={occasionLinks} />
 					</div>
 				</section>
-				<section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-24">
+				<section className="px-4 pb-14 pt-10 sm:px-6 lg:px-8 lg:pb-24 lg:pt-14">
 					<div className="mx-auto max-w-4xl">
 						<div className="text-center">
-							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
+							<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-800">
 								FAQ
 							</p>
 							<h2 className="mt-4 text-balance font-display text-[clamp(2rem,3.5vw,2.9rem)] leading-[1.03] tracking-[-0.03em]">
@@ -355,7 +328,7 @@ export default function LandingPage() {
 								<AccordionItem
 									key={faq.id}
 									value={faq.id}
-									className="overflow-hidden rounded-[1.6rem] border border-stone-200 bg-white/84 px-2"
+									className="overflow-hidden rounded-[1.6rem] border border-stone-200 bg-white/84 px-2 py-1"
 								>
 									<AccordionTrigger className="px-4 py-5 text-left text-lg font-semibold text-stone-950 hover:no-underline sm:px-6">
 										{faq.question}
@@ -368,7 +341,7 @@ export default function LandingPage() {
 						</Accordion>
 					</div>
 				</section>
-				<section className="px-4 pb-16 pt-14 sm:px-6 lg:px-8 lg:pb-24 lg:pt-24">
+				<section className="px-4 pb-16 pt-8 sm:px-6 lg:px-8 lg:pb-24 lg:pt-12">
 					<div className="mx-auto max-w-5xl">
 						<AnimatedClosingCta href={primaryCtaHref} />
 					</div>
@@ -384,22 +357,25 @@ export default function LandingPage() {
 						<div className="mt-4 flex flex-wrap gap-3 text-sm text-stone-600">
 							<Link
 								target="_blank"
+								rel="noopener noreferrer"
 								href="https://www.producthunt.com/products/gift-easy"
-								className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 transition-colors duration-200 hover:text-stone-950 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
+								className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 outline-none transition-colors duration-200 hover:text-stone-950 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2 focus-visible:[outline:2px_solid_#f59e0b] focus-visible:[outline-offset:2px]"
 							>
 								Product Hunt
 							</Link>
 							<Link
 								target="_blank"
+								rel="noopener noreferrer"
 								href="https://trustmrr.com/startup/gifteasy"
-								className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 transition-colors duration-200 hover:text-stone-950 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
+								className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 outline-none transition-colors duration-200 hover:text-stone-950 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2 focus-visible:[outline:2px_solid_#f59e0b] focus-visible:[outline-offset:2px]"
 							>
 								TrustMRR
 							</Link>
 							<Link
 								target="_blank"
+								rel="noopener noreferrer"
 								href="https://x.com/buildtheweb1"
-								className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 transition-colors duration-200 hover:text-stone-950 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
+								className="rounded-full border border-stone-200 bg-white/70 px-4 py-2 outline-none transition-colors duration-200 hover:text-stone-950 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2 focus-visible:[outline:2px_solid_#f59e0b] focus-visible:[outline-offset:2px]"
 							>
 								X / Updates
 							</Link>
@@ -410,7 +386,7 @@ export default function LandingPage() {
 							<Link
 								key={item.label}
 								href={item.href}
-								className="transition-colors duration-200 hover:text-stone-950 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
+								className="inline-block py-3 underline underline-offset-4 decoration-stone-300 outline-none transition-colors duration-200 hover:text-stone-950 hover:decoration-stone-500 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2 focus-visible:[outline:2px_solid_#f59e0b] focus-visible:[outline-offset:2px] sm:py-0"
 							>
 								{item.label}
 							</Link>

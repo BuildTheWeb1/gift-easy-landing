@@ -22,7 +22,7 @@ export default function AnimatedClosingCta({ href }: AnimatedClosingCtaProps) {
 				/>
 			)}
 			<div className="relative">
-				<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">
+				<p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-800">
 					Ready When You Are
 				</p>
 				<h2 className="mx-auto mt-4 max-w-3xl text-balance font-display text-[clamp(2.2rem,3.8vw,3.4rem)] leading-[1.02] tracking-[-0.03em]">
@@ -47,8 +47,9 @@ export default function AnimatedClosingCta({ href }: AnimatedClosingCtaProps) {
 						</Button>
 					</motion.div>
 				</div>
-				<p className="mt-4 text-sm text-stone-600">
-					Free to try · No signup · Takes about 30 seconds
+				<p className="mt-4 text-sm font-medium text-stone-700">
+					Free to try <span className="text-amber-800">&middot;</span> No signup{" "}
+					<span className="text-amber-800">&middot;</span> Takes about 30 seconds
 				</p>
 			</div>
 		</div>

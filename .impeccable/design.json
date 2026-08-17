@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-17T00:00:00.000Z",
+  "title": "Design System: GiftEasy",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Ink Black",
+        "canonical": "#1c1917",
+        "tonalRamp": ["#0c0a09", "#1c1917", "#292524", "#44403c", "#57534e", "#78716c", "#a8a29e", "#d6d3d1"]
+      },
+      "secondary": {
+        "role": "secondary",
+        "displayName": "Warm Sand",
+        "canonical": "#ede3d3",
+        "tonalRamp": ["#8a7355", "#a3896a", "#bfa27e", "#d3bd9c", "#ede3d3", "#f2e9dc", "#f7f0e6", "#fbf6ef"]
+      },
+      "accent": {
+        "role": "accent",
+        "displayName": "Signal Amber",
+        "canonical": "#f59e0b",
+        "tonalRamp": ["#78350f", "#92400e", "#b45309", "#d97706", "#f59e0b", "#fbbf24", "#fcd34d", "#fde68a"]
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "Parchment",
+        "canonical": "#f4efe6",
+        "tonalRamp": ["#a89a82", "#c3b59c", "#dccbb0", "#ede6da", "#f4efe6", "#f8f4ec", "#faf6ef", "#fdfbf7"]
+      },
+      "surface-card": {
+        "role": "neutral",
+        "displayName": "Card Cream",
+        "canonical": "#fffdf8",
+        "tonalRamp": ["#a8a196", "#c4bcae", "#ded6c6", "#f0ebe0", "#fffdf8", "#fffefb", "#fffefc", "#fffffe"]
+      },
+      "surface-inverted": {
+        "role": "neutral",
+        "displayName": "Deep Ink Panel",
+        "canonical": "#0c0a09",
+        "tonalRamp": ["#000000", "#0c0a09", "#1c1917", "#292524", "#44403c", "#57534e", "#78716c", "#a8a29e"]
+      },
+      "muted-foreground": {
+        "role": "neutral",
+        "displayName": "Stone Ink",
+        "canonical": "#57534e",
+        "tonalRamp": ["#1c1917", "#292524", "#44403c", "#57534e", "#78716c", "#a8a29e", "#d6d3d1", "#e7e5e4"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display Serif", "purpose": "Hero H1 and every section H2; always paired with an amber eyebrow label above it." },
+      "eyebrow": { "displayName": "Eyebrow Label", "purpose": "Uppercase, wide-tracked amber label above every section headline; the system's signature rhythm device." },
+      "body": { "displayName": "Body Sans", "purpose": "Section intros and long-form copy, typically capped with text-pretty." }
+    },
+    "shadows": [
+      { "name": "card-lift", "value": "0 20px 70px rgba(28,25,23,0.08)", "purpose": "Default elevation for large content wells." },
+      { "name": "panel-lift", "value": "0 30px 80px rgba(28,25,23,0.13)", "purpose": "Hero preview card and closing-CTA panel." },
+      { "name": "cta-lift", "value": "0 24px 40px rgba(28,25,23,0.18)", "purpose": "Primary CTA buttons." },
+      { "name": "header-button-lift", "value": "0 18px 30px rgba(28,25,23,0.16)", "purpose": "Sticky header's CTA button." }
+    ],
+    "motion": [
+      { "name": "reveal-ease", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Scroll-triggered fade/lift-in for sections and cards (0.55s, y: 28px -> 0)." },
+      { "name": "spring-hover", "value": "type: spring, stiffness: 260, damping: 18-22", "purpose": "Hover lift/press on the primary CTA and social-proof cards." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Pill CTA in ink black with a warm diffuse shadow; the system's main call to action.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Find Gift Ideas</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; height: 3.5rem; padding: 0 1.75rem; border-radius: 9999px; background: #1c1917; color: #fafaf9; font-weight: 600; font-size: 1rem; font-family: 'Avenir Next', 'Segoe UI', sans-serif; box-shadow: 0 24px 40px rgba(28,25,23,0.18); text-decoration: none; transition: background-color 0.2s ease; } .ds-btn-primary:hover { background: #292524; } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 2px rgba(245,158,11,0.6), 0 0 0 4px #f4efe6, 0 24px 40px rgba(28,25,23,0.18); }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary pill CTA on translucent white; paired with the primary button in the hero.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">See an Example</a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; height: 3.5rem; padding: 0 1.75rem; border-radius: 9999px; border: 1px solid #d6d3d1; background: rgba(255,255,255,0.7); color: #1c1917; font-weight: 600; font-size: 1rem; font-family: 'Avenir Next', 'Segoe UI', sans-serif; text-decoration: none; transition: border-color 0.2s ease, background-color 0.2s ease; } .ds-btn-outline:hover { border-color: #78716c; background: #ffffff; }"
+    },
+    {
+      "name": "Eyebrow Label",
+      "kind": "custom",
+      "refersTo": "eyebrow",
+      "description": "Uppercase wide-tracked amber label placed above every section headline; the system's strongest identity marker.",
+      "html": "<p class=\"ds-eyebrow\">Live Demo</p>",
+      "css": ".ds-eyebrow { font-family: 'Avenir Next', 'Segoe UI', sans-serif; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #b45309; }"
+    },
+    {
+      "name": "Content Card",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "Translucent white card with oversized rounding and a hairline border, resting on the parchment gradient.",
+      "html": "<article class=\"ds-card\"><p class=\"ds-eyebrow\">Occasions</p><h3 class=\"ds-card-title\">Anniversary</h3><p class=\"ds-card-body\">Gift ideas for milestones and memories.</p></article>",
+      "css": ".ds-card { border-radius: 1.7rem; border: 1px solid #e7e5e4; background: rgba(255,255,255,0.82); padding: 1.25rem; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; } .ds-card:hover { transform: translateY(-2px); border-color: #a8a29e; box-shadow: 0 16px 32px rgba(28,25,23,0.08); } .ds-card-title { font-family: 'Iowan Old Style', 'Cormorant Garamond', Georgia, serif; font-size: 1.5rem; line-height: 1.2; color: #1c1917; margin-top: 0.75rem; } .ds-card-body { font-family: 'Avenir Next', 'Segoe UI', sans-serif; font-size: 0.875rem; line-height: 1.5; color: #57534e; margin-top: 0.5rem; }"
+    },
+    {
+      "name": "Ink Panel",
+      "kind": "card",
+      "refersTo": "card-inverted",
+      "description": "Near-black inverted panel used for product previews and social proof; the system's only high-contrast surface.",
+      "html": "<div class=\"ds-panel\"><p class=\"ds-eyebrow ds-eyebrow--dark\">Product Preview</p><h3 class=\"ds-panel-title\">Thoughtful results without the panic-scroll.</h3></div>",
+      "css": ".ds-panel { border-radius: 1.9rem; border: 1px solid rgba(255,255,255,0.1); background: #0c0a09; color: #fafaf9; padding: 1.5rem; } .ds-eyebrow--dark { color: #fcd34d; } .ds-panel-title { font-family: 'Iowan Old Style', 'Cormorant Garamond', Georgia, serif; font-size: 2rem; line-height: 1.15; margin-top: 1rem; }"
+    },
+    {
+      "name": "FAQ Accordion Item",
+      "kind": "custom",
+      "refersTo": "accordion",
+      "description": "Rounded-card accordion item (each FAQ entry wraps the base Radix accordion primitive in its own soft card) with a rotating chevron.",
+      "html": "<div class=\"ds-accordion-item\"><button class=\"ds-accordion-trigger\">What makes GiftEasy different?<svg class=\"ds-chevron\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M6 9l6 6 6-6\"/></svg></button><div class=\"ds-accordion-content\">Our AI asks a few quick questions and returns five specific, priced ideas instead of generic categories.</div></div>",
+      "css": ".ds-accordion-item { border-radius: 1.6rem; border: 1px solid #e7e5e4; background: rgba(255,255,255,0.84); padding: 0 0.5rem; overflow: hidden; } .ds-accordion-trigger { display: flex; width: 100%; align-items: center; justify-content: space-between; padding: 1.25rem 1rem; background: none; border: none; text-align: left; font-family: 'Avenir Next', 'Segoe UI', sans-serif; font-weight: 600; font-size: 1.125rem; color: #1c1917; cursor: pointer; } .ds-accordion-trigger:focus-visible { outline: 2px solid rgba(245,158,11,0.6); outline-offset: 2px; } .ds-chevron { transition: transform 0.2s ease; flex-shrink: 0; } .ds-accordion-item[data-state='open'] .ds-chevron { transform: rotate(180deg); } .ds-accordion-content { padding: 0 1rem 1.25rem; font-family: 'Avenir Next', 'Segoe UI', sans-serif; line-height: 1.75; color: #44403c; }"
+    },
+    {
+      "name": "Sticky Header",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Transparent-to-blurred sticky header; solidifies with a backdrop blur once the page scrolls past 12px.",
+      "html": "<header class=\"ds-header\"><div class=\"ds-header-inner\"><span class=\"ds-header-brand\">GiftEasy</span><a class=\"ds-btn-primary\" style=\"height:2.75rem;padding:0 1rem;font-size:0.875rem\" href=\"#\">Find Gift Ideas</a></div></header>",
+      "css": ".ds-header { position: sticky; top: 0; z-index: 40; border-bottom: 1px solid rgba(255,255,255,0.55); background: rgba(250,246,239,0.8); backdrop-filter: blur(24px); } .ds-header-inner { max-width: 72rem; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.5rem; } .ds-header-brand { font-family: 'Iowan Old Style', 'Cormorant Garamond', Georgia, serif; font-size: 1.5rem; letter-spacing: -0.02em; color: #1c1917; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Warm Paper Ledger",
+    "overview": "GiftEasy reads like a well-kept notebook on good paper: a cream-and-parchment canvas, a single warm amber accent used sparingly as a highlighter, and a serif display face reserved for the sentences that matter. Everything else — body copy, labels, buttons — sits in a clean humanist sans so the serif headlines keep their weight. Surfaces are soft and oversized: corners are rounded well past a typical UI radius, shadows are diffuse and warm-toned rather than sharp, and panels of near-black (\"stone-950\") appear as intentional ink blocks against the paper to hold product previews and social proof.\n\nThe system is calm at rest and animates only to reward attention: sections fade and lift into view on scroll, cards lift a few pixels on hover, and the primary CTA gets a light spring bounce. Motion always respects prefers-reduced-motion.",
+    "keyCharacteristics": [
+      "Warm parchment background (radial amber glow + cream-to-tan gradient), never stark white or pure black as a base",
+      "Serif display type for headlines only; humanist sans for everything functional",
+      "One accent color (amber) used almost exclusively for eyebrow labels, dots, and focus rings — never as a large fill",
+      "Oversized, consistently soft radii (1.6rem–2.8rem on cards, full pill on buttons/badges)",
+      "Near-black \"ink\" panels (stone-950) as the system's only high-contrast surface, used for product-preview and social-proof blocks",
+      "Diffuse, warm-tinted shadows (rgba(28,25,23,…)) — never a hard black or cool-gray shadow"
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Amber never fills a large surface. It appears only as label text, a focus ring, a small dot, or a thin glow blur behind hero art — always a highlight, never a background.", "section": "colors" },
+      { "name": "The Ink Panel Rule", "body": "stone-950 panels are reserved for two jobs: previewing the product's own dark UI, and holding social proof. They are not used for generic section backgrounds.", "section": "colors" },
+      { "name": "The Eyebrow Rule", "body": "Every major section opens with an uppercase, wide-tracked amber label directly above its serif headline. This is the system's primary rhythm device.", "section": "typography" },
+      { "name": "The Warm Shadow Rule", "body": "Shadows are always tinted from the ink color, never neutral gray or black. A cool-toned shadow is a bug, not a variant.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use rounded-full for every button, pill, and badge; use the 1.6rem–2.8rem soft-radius family for every card or panel.",
+      "Do pair a serif font-display headline with an amber eyebrow label above it for any new section.",
+      "Do tint all shadows from rgba(28,25,23,…); keep them large-blur and low-opacity rather than tight and dark.",
+      "Do respect prefers-reduced-motion (via useReducedMotion) on any new animated element, matching the existing pattern in MotionReveal, AnimatedClosingCta, and AnimatedSocialProof.",
+      "Do keep amber to labels, dots, rings, and small glows — the accent's power comes from its rarity."
+    ],
+    "donts": [
+      "Don't introduce a second accent hue; the palette is intentionally single-accent.",
+      "Don't use the sharp rounded-md/rounded-lg Tailwind defaults on any user-facing card or button — they read as off-system next to the oversized radii used everywhere else.",
+      "Don't use a pure black, pure white, or cool-gray shadow; it breaks the \"warm paper\" material.",
+      "Don't fill a large surface with amber; reserve solid-color panels for ink black (stone-950) only.",
+      "Don't revive the unused legacy components (Hero/HeroSection.tsx, WhyChoose.tsx, HowItWorks.tsx, FAQSection.tsx, TestimonialsSection.tsx, SocialProofSection.tsx, Footer.tsx) as a styling reference — they predate this system and are not wired into the live page (LandingPage.tsx is canonical)."
+    ]
+  }
+}

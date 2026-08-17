@@ -40,7 +40,7 @@ export default function LandingHeader({
 			<div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:gap-4 sm:px-6 lg:px-8">
 				<Link
 					href="/"
-					className="min-w-0 flex items-center gap-3 rounded-full focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2"
+					className="min-w-0 flex items-center gap-3 rounded-full outline-none focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2 focus-visible:[outline:2px_solid_#f59e0b] focus-visible:[outline-offset:2px]"
 				>
 					<Image
 						src="/GiftEasy-logo.svg"

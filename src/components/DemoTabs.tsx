@@ -114,7 +114,7 @@ export default function DemoTabs({ scenarios }: DemoTabsProps) {
 								onKeyDown={(event) => handleKeyDown(event, index, scenario.id)}
 								tabIndex={isActive ? 0 : -1}
 								className={cn(
-									"shrink-0 snap-start touch-manipulation rounded-full border px-4 py-2 text-sm font-medium transition-[background-color,border-color,color,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2",
+									"shrink-0 snap-start touch-manipulation rounded-full border px-4 py-3 text-sm font-medium outline-none transition-[background-color,border-color,color,box-shadow] duration-200 focus-visible:ring-2 focus-visible:ring-amber-500/60 focus-visible:ring-offset-2 focus-visible:[outline:2px_solid_#f59e0b] focus-visible:[outline-offset:2px] sm:py-2",
 									isActive
 										? "border-stone-950 bg-stone-950 text-stone-50 shadow-sm"
 										: "border-stone-300 bg-white/80 text-stone-700 hover:border-stone-500 hover:bg-white",
@@ -139,17 +139,19 @@ export default function DemoTabs({ scenarios }: DemoTabsProps) {
 				transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
 			>
 				<motion.div
-					className="rounded-[2rem] border border-stone-200 bg-stone-950 p-6 text-stone-50 shadow-[0_24px_60px_rgba(28,25,23,0.12)]"
+					className="flex h-full flex-col justify-between rounded-[2rem] border border-stone-200 bg-stone-950 p-6 text-stone-50 shadow-[0_24px_60px_rgba(28,25,23,0.12)]"
 					initial={shouldReduceMotion ? undefined : { opacity: 0, x: -18 }}
 					animate={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
 					transition={{ duration: 0.4, delay: 0.04, ease: [0.22, 1, 0.36, 1] }}
 				>
-					<p className="text-xs font-semibold uppercase tracking-[0.24em] text-amber-300">
-						Input Summary
-					</p>
-					<p className="mt-4 text-pretty text-lg leading-8 text-stone-100">
-						&ldquo;{activeScenario.input}&rdquo;
-					</p>
+					<div>
+						<p className="text-xs font-semibold uppercase tracking-[0.24em] text-amber-300">
+							Input Summary
+						</p>
+						<p className="mt-4 text-pretty text-lg leading-8 text-stone-100">
+							&ldquo;{activeScenario.input}&rdquo;
+						</p>
+					</div>
 					<div className="mt-8 flex flex-wrap gap-3 text-sm text-stone-300">
 						<span className="rounded-full border border-white/12 px-3 py-1">
 							{activeScenario.occasion}
@@ -169,11 +171,11 @@ export default function DemoTabs({ scenarios }: DemoTabsProps) {
 					animate={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
 					transition={{ duration: 0.4, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
 				>
-					<div className="space-y-4">
+					<div className="divide-y divide-stone-200">
 						{activeScenario.results.map((result, index) => (
 							<motion.article
 								key={result.title}
-								className="w-full min-w-0 rounded-[1.5rem] border border-stone-200 bg-stone-50 p-5"
+								className="w-full min-w-0 py-5 first:pt-0 last:pb-0"
 								initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18, scale: 0.98 }}
 								animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
 								transition={{
@@ -182,10 +184,10 @@ export default function DemoTabs({ scenarios }: DemoTabsProps) {
 									ease: [0.22, 1, 0.36, 1],
 								}}
 							>
-								<p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">
+								<p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-800">
 									Thoughtful Match
 								</p>
-								<h3 className="mt-3 font-display text-[1.65rem] leading-tight text-stone-950">
+								<h3 className="mt-3 font-display text-3xl leading-tight text-stone-950">
 									{result.title}
 								</h3>
 								<p className="mt-3 text-pretty leading-7 text-stone-700">

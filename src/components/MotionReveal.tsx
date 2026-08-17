@@ -30,8 +30,8 @@ export default function MotionReveal({
 			ref={ref}
 			className={className}
 			initial={false}
-			animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : y }}
-			transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
+			animate={{ opacity: isInView ? 1 : 0.4, y: isInView ? 0 : y }}
+			transition={{ duration: 0.4, delay, ease: [0.22, 1, 0.36, 1] }}
 		>
 			{children}
 		</motion.div>
